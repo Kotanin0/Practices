@@ -9,6 +9,5 @@ public class PracticesDemoTest {
     @Test
     public void bai() {
         assertEquals(10, PracticesDemo.bai(5));
-        assertEquals("10じゃない!!",10, PracticesDemo.bai(5));
     }
 }
