@@ -1,5 +1,6 @@
-package main.java.practices;
+package test.java.practices;
 
+import main.java.practices.PracticesDemo;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
