@@ -9,7 +9,7 @@ package main.java.practices;
  * - 商
  * - 余り(x÷y)
  *
- * を求める
+ * を求める関数をそれぞれ作成しなさい
  */
 
 public class Practice001 {

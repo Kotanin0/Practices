@@ -1,7 +1,7 @@
 package main.java.practices;
 
 /**
- * 正の整数値を入力し、それが偶数か判定
+ * 正の整数値を入力し、それが偶数か判定する関数 isOdd を作成しなさい
  */
 
 public class Practice002 {
