@@ -9,9 +9,9 @@ package practices;
  * 　　　返却：10010
  *
  */
+
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 public class Practice010Test {
@@ -19,12 +19,14 @@ public class Practice010Test {
     @Test
     public void getBinary() {
         //テスト１＿例題通り
-        assertEquals("引数:18 返り値:10010","10010", main.java.practices.Practice010.getBinary(18));
-
-        //テスト２＿負の値を入れる
-        assertEquals("引数:-10 返り値:例外","例外", main.java.practices.Practice010.getBinary(-10));
-
+        assertEquals("引数:18 返り値:10010","10010",Practice010.getBinary(18));
         //テスト３＿０
-        assertEquals("引数:0 返り値:0","0", main.java.practices.Practice010.getBinary(0));
+        assertEquals("引数:0 返り値:0","0",Practice010.getBinary(0));
+    }
+
+    //負の数は受け付けないはず
+    @Test(expected = IllegalArgumentException.class)
+    public void testIllegalArgumentException() {
+        Practice010.getBinary(-1);
     }
 }

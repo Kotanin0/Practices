@@ -15,7 +15,6 @@ package practices;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 public class Practice005Test {
@@ -26,17 +25,17 @@ public class Practice005Test {
         int kKa = 60;//"可"になる点数、Ka未満は"不可"
 
         //expected = "優"
-        assertEquals("優", main.java.practices.Practice005.showResult(kYuu+1));
-        assertEquals("優", main.java.practices.Practice005.showResult(kYuu));
+        assertEquals("優",Practice005.showResult(kYuu+1));
+        assertEquals("優",Practice005.showResult(kYuu));
         //expected = "良"
-        assertEquals("良", main.java.practices.Practice005.showResult(kYuu-1));
-        assertEquals("良", main.java.practices.Practice005.showResult(kRyou));
-        assertEquals("良", main.java.practices.Practice005.showResult(kRyou+1));
+        assertEquals("良",Practice005.showResult(kYuu-1));
+        assertEquals("良",Practice005.showResult(kRyou));
+        assertEquals("良",Practice005.showResult(kRyou+1));
         //expected = "可"
-        assertEquals("可", main.java.practices.Practice005.showResult(kRyou-1));
-        assertEquals("可", main.java.practices.Practice005.showResult(kKa));
-        assertEquals("可", main.java.practices.Practice005.showResult(kKa+1));
+        assertEquals("可",Practice005.showResult(kRyou-1));
+        assertEquals("可",Practice005.showResult(kKa));
+        assertEquals("可",Practice005.showResult(kKa+1));
         //expected = "不可"
-        assertEquals("不可", main.java.practices.Practice005.showResult(kKa-1));
+        assertEquals("不可",Practice005.showResult(kKa-1));
     }
 }

@@ -13,16 +13,15 @@ package practices;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 public class Practice004Test {
     @Test
     public void showResult(){
         //58,59,60,61を試験
-        assertEquals("58点は不合格","不合格", main.java.practices.Practice004.showResult(58));
-        assertEquals("59点は不合格","不合格", main.java.practices.Practice004.showResult(58));
-        assertEquals("60点は合格","合格", main.java.practices.Practice004.showResult(60));
-        assertEquals("61点は合格","合格", main.java.practices.Practice004.showResult(61));
+        assertEquals("58点は不合格","不合格",Practice004.showResult(58));
+        assertEquals("59点は不合格","不合格",Practice004.showResult(58));
+        assertEquals("60点は合格","合格",Practice004.showResult(60));
+        assertEquals("61点は合格","合格",Practice004.showResult(61));
     }
 }
