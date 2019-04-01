@@ -20,26 +20,26 @@ public class Practice001 {
 
     // 和
     public static int wa(int x, int y) {
-        return x + y;
+        return ;
     }
 
     // 差
     public static int sa(int x, int y) {
-        return x - y;
+        return ;
     }
 
     // 積
     public static int seki(int x, int y) {
-        return x * y;
+        return ;
     }
 
     // 商
     public static int sho(int x, int y) {
-        return x / y;
+        return ;
     }
 
     // 余り
     public static int amari(int x, int y) {
-        return x % y;
+        return ;
     }
 }
