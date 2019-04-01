@@ -19,11 +19,12 @@ package practices;
  */
 
 import org.junit.Test;
-
 import static org.junit.Assert.*;
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.CoreMatchers.*;
 
 public class Practice011Test {
+    //まだ完成してない。
+
     //テスト１＿例題の通り
     int[] TestArray1_arg =      new int[] {0,1,2,3,4,5,6,7,8,9};
     int[] TestArray1_exp_Odd =  new int[] {  1,  3,  5,  7,  9};
@@ -31,41 +32,44 @@ public class Practice011Test {
 
     //テスト２＿負の数を入れる
     int[] TestArray2_arg =      new int[] {-3,-2,-1,0, 1,2,3};
-    int[] TestArray2_exp_Odd =  new int[] {-3,   -1,       3};
+    int[] TestArray2_exp_Odd =  new int[] {-3,   -1,   1,  3};
     int[] TestArray2_exp_Even = new int[] {   -2,   0,   2  };
 
-    //テスト３＿重複がある
-    int[] TestArray3_arg =      new int[] {2,2,4,4,0,0};
-    int[] TestArray3_exp_Odd =  new int[] {    1,1    };
-    int[] TestArray3_exp_Even = new int[] {2,2,    0,0};
+    //テスト３＿偶数の返り値が空
+    int[] TestArray3_arg =      new int[] {1,3,5,7,9};
+    int[] TestArray3_exp_Even = new int[] {};
 
-    //テスト４＿一方が空
-    int[] TestArray4_arg =      new int[] {1,3,5,7,9};
-    int[] TestArray4_exp_Odd =  new int[] {1,3,5,7,9};
-    int[] TestArray4_exp_Even = new int[] {};
+    //テスト３＿奇数の返り値が空
+    int[] TestArray4_arg =      new int[] {2,4,6,8,10};
+    int[] TestArray4_exp_Odd =  new int[] {};
 
     @Test
-    public void getOdd() {
-        //テスト１
-        int[]
-        assertEquals(TestArray1_exp_Odd, main.java.practices.Practice011.getOdd(TestArray1_arg));
-        //テスト２
-        assertEquals(TestArray2_exp_Odd, main.java.practices.Practice011.getOdd(TestArray2_arg));
-        //テスト３
-        assertEquals(TestArray3_exp_Odd, main.java.practices.Practice011.getOdd(TestArray3_arg));
-        //テスト４
-        assertEquals(TestArray3_exp_Odd, main.java.practices.Practice011.getOdd(TestArray4_arg));
+    public void getOddは例題通りの返り値をくれる_TestArray1() {
+        assertThat(Practice011.getOdd(TestArray1_arg),is(TestArray1_exp_Odd));
     }
 
     @Test
-    public void getEven() {
-        //テスト１
-        assertEquals(TestArray1_exp_Even, main.java.practices.Practice011.getOdd(TestArray1_arg));
-        //テスト２
-        assertEquals(TestArray2_exp_Even, main.java.practices.Practice011.getOdd(TestArray2_arg));
-        //テスト３
-        assertEquals(TestArray3_exp_Even, main.java.practices.Practice011.getOdd(TestArray3_arg));
-        //テスト４
-        assertEquals(TestArray4_exp_Even, main.java.practices.Practice011.getOdd(TestArray4_arg));
+    public void getEvenは例題通りの返り値をくれえる_TestArray1(){
+        assertThat(Practice011.getEven(TestArray1_arg),is(TestArray1_exp_Even));
     }
+
+    @Test
+    public void getOddに負の数が含まれる配列を渡しても奇数がかえってくる_TestArray2(){
+        assertThat(Practice011.getOdd(TestArray2_arg),is(TestArray2_exp_Odd));
+    }
+
+    @Test
+    public void getEvenに負の数が含まれる配列を渡しても奇数がかえってくる_TestArray2(){
+        assertThat(Practice011.getEven(TestArray2_arg),is(TestArray2_exp_Even));
+    }
+
+    @Test
+    public void getOddに偶数がふくまれない配列を渡すと空の配列がかえってくる_TestArray3(){
+        assertThat(Practice011.getEven(TestArray3_arg),is(TestArray3_exp_Even));
+    }
+    @Test
+    public void getOddに奇数がふくまれない配列を渡すと空の配列がかえってくる_TestArray3(){
+        assertThat(Practice011.getOdd(TestArray4_arg),is(TestArray4_exp_Odd));
+    }
+
 }
