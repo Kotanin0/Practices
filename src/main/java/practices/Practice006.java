@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 九九の答えを表示する関数 showKuku を作成しなさい
@@ -17,8 +17,16 @@ public class Practice006 {
 
     // 九九の答え
     public static String showKuku(int n) {
+        if(n <= 0 | n >= 10){
+            throw  new IllegalArgumentException("引数は1～9の間を指定してください");
+        }
 
-        return "";
+        String strKuku = "";
+
+        for(int i=1;i<10;i++) {
+            strKuku = strKuku + (n * i);
+            strKuku = strKuku + " ";
+        }
+        return strKuku.trim();
     }
-
 }

@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 西暦を入力するとうるう年か判定する関数 isLeapYear を作成しなさい
@@ -16,8 +16,20 @@ public class Practice014 {
 
     // うるう年ならtrue
     public static boolean isLeapYear(int n) {
-
-        return true;
+        if(n % 4 == 0){
+            if(n % 100 == 0){
+                if(n % 400 == 0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }else{
+                return true;
+            }
+        }
+        else {
+            return false;
+        }
     }
 
 }

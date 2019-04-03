@@ -1,4 +1,6 @@
-package main.java.practices;
+package practices;
+
+import java.util.Arrays;
 
 /**
  * 配列の中身を小さい順に並べ替える関数 sort を作成しなさい
@@ -19,7 +21,7 @@ public class Practice013 {
 
     // 並べ替えられた配列を返す
     public static int[] sort(int[] n) {
-
+        Arrays.sort(n);
         return n;
     }
 

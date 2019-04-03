@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 試験の点数を入力し、対応する結果を表示する関数 showResult を作成しなさい
@@ -14,13 +14,15 @@ package main.java.practices;
 public class Practice004 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
     }
 
     // 試験の結果を返却する
     public static String showResult(int n) {
-
-        return "";
+        if(n>=60){
+            return"合格";
+        }
+        else{
+            return"不合格";
+        }
     }
-
 }
