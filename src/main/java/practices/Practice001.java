@@ -1,4 +1,4 @@
-package practices;
+package main.java.practices;
 
 /**
  * int 型の変数 x、y にそれぞれ数値を入力し
@@ -15,37 +15,31 @@ package practices;
 public class Practice001 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        System.out.print(0%2);
+
     }
 
     // 和
     public static int wa(int x, int y) {
-        return x + y;
+        return ;
     }
 
     // 差
     public static int sa(int x, int y) {
-        return x - y;
+        return ;
     }
 
     // 積
     public static int seki(int x, int y) {
-        return x * y;
+        return ;
     }
 
     // 商
     public static int sho(int x, int y) {
-        if(y == 0){
-            throw new IllegalArgumentException("引数の値が不正です");
-        }
-        return x / y;
+        return ;
     }
 
     // 余り
     public static int amari(int x, int y) {
-        if(y == 0){
-            throw new IllegalArgumentException("引数の値が不正です");
-        }
-        return x % y;
+        return ;
     }
 }
