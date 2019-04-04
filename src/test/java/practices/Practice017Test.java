@@ -7,7 +7,7 @@ package practices;
  *
  */
 import org.junit.Test;
-
+import main.java.practices.Practice017;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
 
