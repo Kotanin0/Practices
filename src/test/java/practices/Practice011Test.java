@@ -21,6 +21,7 @@ package practices;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+import main.java.practices.Practice011;
 
 public class Practice011Test {
     //テスト１＿例題の通り

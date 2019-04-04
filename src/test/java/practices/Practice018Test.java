@@ -10,9 +10,9 @@ package practices;
  *
  */
 import org.junit.Test;
-
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.*;
+import main.java.practices.Practice018;
 
 public class Practice018Test {
 

@@ -1,8 +1,8 @@
 package practices;
 
 import org.junit.Test;
-
 import static org.junit.Assert.*;
+import main.java.practices.Practice001;
 
 public class Practice001Test {
 
