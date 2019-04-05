@@ -17,13 +17,27 @@ package practices;
 public class Practice003 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        System.out.println(displayText(3));
     }
 
     // 正の偶数、正の奇数、負の偶数、負の奇数のいずれかを返却する
     public static String displayText(int n) {
-
+        if (n % 2 == 0){
+            if(n >= 0){
+                return"正の偶数";
+            }
+            else {
+                return"負の偶数";
+            }
+        }
+        if(n % 2 != 0){
+            if(n >= 0){
+                return"正の奇数";
+            }
+            else {
+                return"負の奇数";
+            }
+        }
         return "";
     }
-
 }
