@@ -17,8 +17,11 @@ public class Practice006 {
 
     // 九九の答え
     public static String showKuku(int n) {
-
-        return "";
+        String result = "";
+        for (int i=1; i<=9; i++) {
+            result += i * n + " ";
+        }
+        return result.trim();
     }
 
 }

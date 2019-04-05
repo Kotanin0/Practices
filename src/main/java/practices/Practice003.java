@@ -22,8 +22,15 @@ public class Practice003 {
 
     // 正の偶数、正の奇数、負の偶数、負の奇数のいずれかを返却する
     public static String displayText(int n) {
+        return isPositive(n) + "の" + isOdd(n);
+    }
 
-        return "";
+    private static String isPositive(int n) {
+        return (n >= 0)? "正" : "負";
+    }
+
+    private static String isOdd(int n) {
+        return (n % 2 == 0)? "偶数" : "奇数";
     }
 
 }

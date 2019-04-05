@@ -11,8 +11,8 @@ public class Practice002 {
     }
 
     // 偶数判定
-    public static boolean isOdd(int n) {
-        return false;
+    public static Object isOdd(int n) {
+        return (n == 0)? 0 : (n % 2 == 0);
     }
 
 }
