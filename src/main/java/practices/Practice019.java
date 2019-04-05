@@ -20,12 +20,38 @@ package practices;
 public class Practice019 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        System.out.println(coincheck(99999));
     }
 
-    public static String coincheck(int n) {
+    public static String coincheck(int n){
+        if(n <= 0){
+            return "";
+        }
 
-        return "";
+        int[] monetaryUnit = {10000,5000,1000,500,100,50,10,5,1};//貨幣の種類
+        int[] returnCoin =   {    0,   0,   0,  0,  0, 0, 0,0,0};//貨幣単位ごとの枚数を格納する
+
+        //1万円はnを10,000で割ったときの商
+        returnCoin[0] = n / monetaryUnit[0];
+
+        //1万円未満は、1つ前の貨幣の剰余の商
+        for(int i = 1;i < monetaryUnit.length;i++){
+            returnCoin[i] = (n % monetaryUnit[i-1])/monetaryUnit[i];
+        }
+
+        //返り値作成
+        String returnStr = "";
+        String br = System.getProperty("line.separator");
+        int j = 0;
+        for(j = 0;j < monetaryUnit.length-1;j++){
+            if(returnCoin[j] != 0){
+                returnStr += monetaryUnit[j] + "円" + "＝" + returnCoin[j] + "枚" + br;
+            }
+        }
+        //最後は改行なし
+        returnStr += monetaryUnit[j] + "円" + "＝" + returnCoin[j] + "枚";
+
+        return returnStr;
     }
 
 }
