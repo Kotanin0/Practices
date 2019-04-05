@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * ランダムで「グー」「チョキ」「パー」のいずれかを出力する関数

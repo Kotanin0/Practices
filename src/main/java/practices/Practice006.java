@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 九九の答えを表示する関数 showKuku を作成しなさい

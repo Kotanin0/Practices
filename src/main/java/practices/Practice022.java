@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 以前作成した素数判定関数を100000回実行したときの除算回数、処理時間をmsで出力しなさい

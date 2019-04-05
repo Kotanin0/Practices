@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 入力された整数を 日本円（小銭のみ）で支払ったときの硬貨の枚数を出力する関数

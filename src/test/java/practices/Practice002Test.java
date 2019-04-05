@@ -2,7 +2,6 @@ package practices;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
-import main.java.practices.Practice002;
 
 public class Practice002Test {
     @Test

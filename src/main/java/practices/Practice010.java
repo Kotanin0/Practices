@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 入力された整数を2進数に変換する関数 getBinary を作成しなさい
@@ -18,7 +18,7 @@ public class Practice010 {
     }
 
     // 2進数の文字列を返す
-    public static int[] getBinary(int n) {
+    public static String getBinary(int n) {
 
         return "";
     }

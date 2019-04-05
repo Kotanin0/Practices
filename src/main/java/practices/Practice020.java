@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 入力された文字列が郵便番号、電話番号、メールアドレス、それ以外のいずれかを判定する関数
@@ -35,17 +35,17 @@ public class Practice020 {
 
     public static boolean isPostNumber(String s) {
 
-        return "";
+        return false;
     }
 
     public static boolean isPhoneNumber(String s) {
 
-        return "";
+        return false;
     }
 
     public static boolean isMailAddress(String s) {
 
-        return "";
+        return false;
     }
 
 }

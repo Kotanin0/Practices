@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 入力された文字の中に "ge" という文字列が含まれているか判定する関数 ge を作成しなさい

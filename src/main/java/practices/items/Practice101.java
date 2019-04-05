@@ -1,4 +1,4 @@
-package main.java.practices.items;
+package practices.items;
 
 /**
  * 商品を管理するクラスItemを作成しなさい

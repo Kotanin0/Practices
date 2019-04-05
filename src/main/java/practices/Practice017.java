@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 5の倍数と、5の付く数字のときに "buzz" と返却する関数 buzz を作成しなさい

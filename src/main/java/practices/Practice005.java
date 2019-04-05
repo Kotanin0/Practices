@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 試験の点数を入力し、対応する結果を表示する関数 showResult を作成しなさい

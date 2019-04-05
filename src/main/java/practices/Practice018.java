@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 3の倍数と、3の付く数字のときに "fizz" と返却

@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 配列の中身を奇数と偶数に分類する関数 getOdd, getEven を作成しなさい
@@ -28,13 +28,13 @@ public class Practice011 {
     // 奇数のみを返す
     public static int[] getOdd(int[] n) {
 
-        return "";
+        return n;
     }
 
     // 偶数のみを返す
     public static int[] getEven(int[] n) {
 
-        return "";
+        return n;
     }
 
 }
