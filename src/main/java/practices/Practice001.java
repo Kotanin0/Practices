@@ -15,18 +15,24 @@ package practices;
 public class Practice001 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        int x = 20 ; int y = 5;
+        System.out.println("和＝"+ wa(x,y));
+        System.out.println("差＝"+ sa(x,y));
+        System.out.println("積＝"+ seki(x,y));
+        System.out.println("商＝"+ sho(x,y));
+        System.out.println("余り＝"+ amari(x,y));
     }
 
     // 和
     public static int wa(int x, int y) {
+
         return x + y;
     }
 
     // 差
     public static int sa(int x, int y) {
 
-        return x - y;
+        return x - y ;
     }
 
     // 積
@@ -37,7 +43,7 @@ public class Practice001 {
 
     // 商
     public static int sho(int x, int y) {
-        if(y==0){
+        if(y == 0){
             return 0;
         }else {
             return x / y;
@@ -46,7 +52,7 @@ public class Practice001 {
 
     // 余り
     public static int amari(int x, int y) {
-        if(y==0){
+        if(y == 0){
             return 0;
         }else{
             return x % y;
