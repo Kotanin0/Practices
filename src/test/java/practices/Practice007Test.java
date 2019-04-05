@@ -8,8 +8,8 @@ package practices;
  */
 
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
+import main.java.practices.Practice007;
 
 public class Practice007Test {
 
