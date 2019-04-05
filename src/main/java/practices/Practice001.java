@@ -16,6 +16,7 @@ public class Practice001 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
 
+        
     }
 
     // 和
