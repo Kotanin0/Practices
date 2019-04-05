@@ -11,13 +11,24 @@ package practices;
 public class Practice014 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
     }
 
     // うるう年ならtrue
     public static boolean isLeapYear(int n) {
-
-        return true;
+        if(n % 4 == 0){
+            if(n % 100 == 0){
+                if(n % 400 == 0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }else{
+                return true;
+            }
+        }
+        else {
+            return false;
+        }
     }
 
 }
