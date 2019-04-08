@@ -12,7 +12,10 @@ public class Practice002 {
 
     // 偶数判定
     public static boolean isOdd(int n) {
-        return false;
+        if(n < 0){
+            throw new IllegalArgumentException("0未満のため出力できません");
+        }
+        return (n % 2 == 0);
     }
 
 }

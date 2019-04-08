@@ -1,5 +1,4 @@
 package practices;
-
 /**
  * 2以上の数値を入力し、素因数分解した結果を表示しなさい。
  *
@@ -13,13 +12,28 @@ package practices;
 public class Practice008 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        String forOutput = factorization(20100);
+        System.out.println(forOutput);
     }
 
     // 素因数分解
     public static String factorization(int n) {
+        if(n < 2){
+            throw new IllegalArgumentException("不当な引数です");
+        }
 
-        return "";
+        String StrFactors = "";
+        int Substitute = n;
+
+        for(int i = 2 ; i <=Substitute ; i++){
+            while (n % i == 0){
+                StrFactors = StrFactors + i;
+                StrFactors = StrFactors + " ";
+                n = n / i;
+            }
+        }
+
+        return StrFactors.trim();
     }
 
 }

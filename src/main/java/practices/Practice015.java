@@ -11,13 +11,16 @@ package practices;
 public class Practice015 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
     }
 
     // "ge" という文字列が含まれているならtrue
     public static boolean ge(String str) {
+        if(str.contains("ge")){
+            return true;
+        }else{
+            return false;
+        }
 
-        return true;
     }
 
 }
