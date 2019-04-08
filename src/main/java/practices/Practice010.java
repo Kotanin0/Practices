@@ -14,13 +14,29 @@ package practices;
 public class Practice010 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        int m = 1; //10進数の入力
+        System.out.println("10進数[ " + m + " ]の2進数 ＝ " + getBinary(m));
     }
 
     // 2進数の文字列を返す
     public static String getBinary(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("引数の値が不正です");
+        } else if (n == 0) {
+            return String.valueOf(n);
+        } else {
+            int bin = 2; //2進数であることの代入
+            int div = n;
+            int mod ;
+            String binary = "";
 
-        return "";
+            for(int i = 0; div >= bin-1 ;i++){
+                mod = div % bin;
+                div = div / bin;
+                binary = String.valueOf(mod) + binary;
+
+            }
+            return binary;
+        }
     }
-
 }
