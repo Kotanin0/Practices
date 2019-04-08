@@ -33,10 +33,10 @@ public class Practice011 {
         }
     }
 
-    public static int[] ArrayLst_toList(ArrayList<Integer> X){
+    public static int[] arrayLstToList(ArrayList<Integer> X){
         int[] returnList = new int[X.size()];
 
-        for (int i = 0;i<X.size();i++) {
+        for (int i = 0; i < X.size(); i++) {
             returnList[i] = X.get(i); // Integer
         }
         return returnList;
@@ -45,29 +45,22 @@ public class Practice011 {
     // 奇数のみを返す
     public static int[] getOdd(int[] n) {
         ArrayList<Integer> arrayOdd = new ArrayList<Integer>();
-        int i;
-        int j=0;
-        for(i=0;i < n.length;i++){
-            if(n[i] % 2 != 0){
+        for(int i = 0; i < n.length; i++) {
+            if(n[i] % 2 != 0) {
                 arrayOdd.add(n[i]);
-                j++;
             }
         }
-        return ArrayLst_toList(arrayOdd);
+        return arrayLstToList(arrayOdd);
     }
 
     // 偶数のみを返す
     public static int[] getEven(int[] n) {
         ArrayList<Integer> arrayEven = new ArrayList<Integer>();
-        int i;
-        int j=0;
-        for(i=0;i < n.length;i++){
+        for(int i = 0; i < n.length; i++){
             if(n[i] % 2 == 0){
                 arrayEven.add(n[i]);
-                j++;
             }
         }
-        return ArrayLst_toList(arrayEven);
+        return arrayLstToList(arrayEven);
     }
-
 }
