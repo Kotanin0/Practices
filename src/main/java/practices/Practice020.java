@@ -30,22 +30,33 @@ package practices;
 public class Practice020 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        String regex1 = "やまだーーーたろう";
+        System.out.println(regex1.matches("や.......う"));//true
+        System.out.println(regex1.matches("^やま.*"));//true
+        System.out.println(regex1.matches("やまだー*たろう"));//true
+        String regex2 = "やまもたろう";
+        System.out.println(regex2.matches("やまもと*たろう"));//true
+        System.out.println(regex2.matches("やまもと+たろう"));//false
+        System.out.println(regex2.matches("やまもと?たろう"));//true
+        System.out.println(regex1.matches("やまだー+たろう"));//true
+        System.out.println(regex1.matches("やまもたろう|やまだーーーたろう"));//true
+        System.out.println(regex2.matches("やまもたろう|やまだーーーたろう"));//true
+        String regex3 = "今日は晴です";
+        String regex4 = "今日は雪です";
+        System.out.println(regex3.matches("今日は[晴雨]です"));//true
+        System.out.println(regex4.matches("今日は[晴雨]です"));//false
     }
 
     public static boolean isPostNumber(String s) {
-
-        return false;
+        return s.matches("^[0-9]{3}-?[0-9]{4}$");
     }
 
+    //読みづらいきがする
     public static boolean isPhoneNumber(String s) {
-
-        return false;
+        return s.matches("[0-9]{11}|[0-9]{3}-[0-9]{4}-[0-9]{4}|[0-9]{2}-[0-9]{4}-[0-9]{4}");
     }
 
     public static boolean isMailAddress(String s) {
-
-        return false;
+        return s.matches("^..*@.*(\\.com|\\.co.jp|\\.ne.jp)$");
     }
-
 }
