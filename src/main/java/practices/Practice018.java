@@ -18,23 +18,9 @@ public class Practice018 {
     }
 
     public static String fizzbuzz(int n) {
-        boolean fizz = false;
-        boolean buzz = false;
-
-        if(Practice016.fizz(n) == "fizz"){
-            fizz = true;
-        }
-        if(Practice017.buzz(n) == "buzz"){
-            buzz = true;
-        }
-
-        if(fizz && buzz){
-            return "fizzbuzz";
-        }else if(fizz){
-            return "fizz";
-        }else if(buzz){
-            return "buzz";
-        }
+        if (Practice016.fizz(n) == "fizz" && Practice017.buzz(n) == "buzz") return "fizzbuzz";
+        if (Practice016.fizz(n) == "fizz") return "fizz";
+        if (Practice017.buzz(n) == "buzz") return "buzz";
         return "";
     }
 }
