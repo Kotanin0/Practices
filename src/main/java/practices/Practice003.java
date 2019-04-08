@@ -14,6 +14,8 @@ package practices;
  * ※ 0 は 正の偶数 であるとする。
  */
 
+
+
 public class Practice003 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
@@ -22,8 +24,17 @@ public class Practice003 {
 
     // 正の偶数、正の奇数、負の偶数、負の奇数のいずれかを返却する
     public static String displayText(int n) {
+        if (n >= 0) {
+            return n % 2 == 0 ? "正の偶数" : "正の奇数";
 
-        return "";
+        } else {
+            return n % 2 == 0 ? "負の偶数" : "負の奇数";
+
+        }
+
     }
 
 }
+
+
+
