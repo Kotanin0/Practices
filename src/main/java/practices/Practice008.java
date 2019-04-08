@@ -18,17 +18,17 @@ public class Practice008 {
 
     // 素因数分解
     public static String factorization(int n) {
-        String strFactorization = "";
-
         if(n < 2){
             throw new IllegalArgumentException("引数の値が不正です");
         }
 
+        String strFactorization = "";
         int copy_n = n;
-        for(int i=2;i<=copy_n;i++) {
+
+        for(int i = 2 ; i <= copy_n ; i++) {
             while (n % i == 0) {
-                strFactorization = strFactorization + i;
-                strFactorization = strFactorization + " ";
+                    strFactorization += i;
+                    strFactorization += " ";
                 n = n / i;
             }
         }
