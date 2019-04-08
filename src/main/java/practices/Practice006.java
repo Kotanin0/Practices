@@ -22,10 +22,9 @@ public class Practice006 {
         }
 
         String strKuku = "";
-
         for(int i=1;i<10;i++) {
-            strKuku = strKuku + (n * i);
-            strKuku = strKuku + " ";
+            strKuku += (n * i);
+            strKuku += " ";
         }
         return strKuku.trim();
     }
