@@ -27,7 +27,7 @@ public class Practice010 {
         }
 
         String returnBinary = "";
-        while (n >0){
+        while (n > 0){
             returnBinary = (n % 2) + returnBinary;
             n = n / 2;
         }
