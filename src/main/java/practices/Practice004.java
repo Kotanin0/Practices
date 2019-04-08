@@ -14,7 +14,7 @@ package practices;
 public class Practice004 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        int result1 = 80;
+        int result1 = 90;
         int result2 = 50;
         System.out.println(showResult(result1));
         System.out.println(showResult(result2));

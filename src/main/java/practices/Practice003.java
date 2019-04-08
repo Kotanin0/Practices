@@ -17,7 +17,7 @@ package practices;
 public class Practice003 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        int num = 5;
+        int num = 10;
         String answer = displayText(num);
         System.out.println(answer);
     }
