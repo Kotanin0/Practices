@@ -17,11 +17,11 @@ public class Practice016 {
     // 3の倍数と、3の付く数字なら"fizz"
     public static String fizz(int n) {
         String strN = String.valueOf(n);
-        if(n == 0){
+        if(n == 0) {
             return "";
-        } else if(n % 3 == 0){
+        } else if(n % 3 == 0) {
             return "fizz";
-        }else if(strN.matches(".*3.*")){
+        } else if(strN.matches(".*3.*")) {
             return "fizz";
         }
         return "";
