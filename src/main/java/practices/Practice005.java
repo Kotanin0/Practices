@@ -21,8 +21,14 @@ public class Practice005 {
 
     // 試験の結果を返却する
     public static String showResult(int n) {
-
-        return "";
+        if (n >= 80) {
+            return "優";
+        } else if (n <= 79 && n > 69) {
+            return "良";
+        } else if (n <= 69 && n > 59) {
+            return "可";
+        } else return "不可";
     }
-
 }
+
+
