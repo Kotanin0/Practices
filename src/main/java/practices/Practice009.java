@@ -13,7 +13,7 @@ package practices;
 public class Practice009 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        System.out.println(showFibonacci(2));
+        //System.out.println(showFibonacci(2));
     }
 
     // フィボナッチ数列を返却
@@ -35,7 +35,7 @@ public class Practice009 {
             fib_1 = fib_2;
             fib_2 = fib_0;
             strFibonacci += fib_0;
-            strFibonacci+= " ";
+            strFibonacci += " ";
         }
         return strFibonacci.trim();
     }
