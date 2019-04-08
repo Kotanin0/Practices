@@ -29,11 +29,11 @@ public class Practice021 {
         //テスコトード judgeThirtypPercent
         /*
         int judgeThirtypPercent1[] = {3,3,3};
-        System.out.println("Trueが返ってきてほしい →" + judgeThirtypPercent(judgeThirtypPercent1));
+        System.out.println("falseが返ってきてほしい →" + judgeThirtypPercent(judgeThirtypPercent1));
         int judgeThirtypPercent2[] = {29,29,42};
-        System.out.println("falseが返ってきてほしい →" + judgeThirtypPercent(judgeThirtypPercent2));
+        System.out.println("trueが返ってきてほしい →" + judgeThirtypPercent(judgeThirtypPercent2));
         int judgeThirtypPercent3[] = {0,0,0};
-        System.out.println("falseが返ってきてほしい →" + judgeThirtypPercent(judgeThirtypPercent3));
+        System.out.println("trueが返ってきてほしい →" + judgeThirtypPercent(judgeThirtypPercent3));
         */
     }
 
@@ -80,8 +80,9 @@ public class Practice021 {
         int sumListJanken = sumJanken(x);
         String br = System.getProperty("line.separator");
 
-        return "グー："    + x[0] + "回（" + (x[0] * 100 / sumListJanken) +"％）"+ br +
-                "チョキ：" + x[1] + "回（" + (x[1] * 100 / sumListJanken) +"％）"+ br +
-                "チョキ：" + x[1] + "回（" + (x[1] * 100 / sumListJanken)+ "％）";
+        return "グー："    + x[0]          + "回（" + (x[0] * 100 / sumListJanken) + "％）" + br +
+                "チョキ：" + x[1]          + "回（" + (x[1] * 100 / sumListJanken) + "％）" + br +
+                "パー："   + x[1]          + "回（" + (x[2] * 100 / sumListJanken) + "％）" + br +
+                "合計："   + sumListJanken + "回（" + 100                          + "％）";
     }
 }
