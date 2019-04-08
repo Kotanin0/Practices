@@ -16,7 +16,7 @@ public class Practice001 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
 
-        
+
     }
 
     // 和
@@ -36,19 +36,27 @@ public class Practice001 {
 
     // 商
     public static int sho(int x, int y) {
+        // 三項演算子を使用
+        return y == 0 ? 0 : (x / y);
+/*
         if(y == 0){
             return 0;
         } else {
             return x / y;
         }
+*/
     }
 
     // 余り
     public static int amari(int x, int y) {
+        // 三項演算子を使用
+        return y == 0 ? 0 : (x % y);
+/*
         if(y == 0){
             return 0;
         } else {
             return x % y;
         }
+*/
     }
 }
