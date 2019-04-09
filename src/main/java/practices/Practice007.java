@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 素数を判定する関数 isPrime を作成しなさい
@@ -8,6 +8,7 @@ package main.java.practices;
  */
 
 public class Practice007 {
+
     public static void main(String[] args) {
         // ここはご自由にお使いください
 
@@ -15,8 +16,7 @@ public class Practice007 {
 
     // 素数判定
     public static boolean isPrime(int n) {
-
-        return false;
+        return true;
     }
 
 }

@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * フィボナッチ数列を表示する関数 showFibonacci を作成しなさい

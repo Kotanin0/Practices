@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 配列の中身を小さい順に並べ替える関数 sort を作成しなさい

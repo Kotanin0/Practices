@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 整数値を入力し、以下の4つの分類から該当するものを表示する関数 displayText を作成しなさい

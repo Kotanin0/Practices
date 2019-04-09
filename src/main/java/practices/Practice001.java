@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * int 型の変数 x、y にそれぞれ数値を入力し
@@ -20,26 +20,26 @@ public class Practice001 {
 
     // 和
     public static int wa(int x, int y) {
-        return ;
+        return 0;
     }
 
     // 差
     public static int sa(int x, int y) {
-        return ;
+        return 0;
     }
 
     // 積
     public static int seki(int x, int y) {
-        return ;
+        return 0;
     }
 
     // 商
     public static int sho(int x, int y) {
-        return ;
+        return 0;
     }
 
     // 余り
     public static int amari(int x, int y) {
-        return ;
+        return 0;
     }
 }

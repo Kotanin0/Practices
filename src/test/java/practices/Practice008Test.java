@@ -1,11 +1,9 @@
 package practices;
 
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 
 public class Practice008Test {
-
     @Test
     public void factorization() {
         assertEquals("2","2",Practice008.factorization(2));

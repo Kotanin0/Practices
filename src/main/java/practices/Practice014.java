@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 西暦を入力するとうるう年か判定する関数 isLeapYear を作成しなさい

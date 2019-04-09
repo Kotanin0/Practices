@@ -1,4 +1,4 @@
-package main.java.practices;
+package practices;
 
 /**
  * 2以上の数値を入力し、素因数分解した結果を表示しなさい。
