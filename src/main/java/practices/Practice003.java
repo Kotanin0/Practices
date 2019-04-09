@@ -21,9 +21,15 @@ public class Practice003 {
     }
 
     // 正の偶数、正の奇数、負の偶数、負の奇数のいずれかを返却する
-    public static String displayText(int n) {
-
-        return "";
+    public static void String displayText(int n) {
+        if (n % 2 == 0 && n / 2 < 0) {
+            System.out.println("負の偶数");
+        } else if (n % 2 == 1 && n / 2 < 0) {
+            System.out.println("負の奇数");
+        } else if (n % 2 == 0 && n / 2 > 0) {
+            System.out.println("正の偶数");
+        } else if (n % 2 == 1 && n / 2 > 0) {
+            System.out.println("正の奇数");
+        }
     }
-
 }
