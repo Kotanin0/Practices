@@ -13,7 +13,7 @@ package practices;
 public class Practice008 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        System.out.println(factorization(20100));
+//        System.out.println(factorization(20100));
 
     }
 
@@ -24,28 +24,32 @@ public class Practice008 {
         // 同じ約数が何度も出てくる可能性ある
         // 割り切れなくなったら次の数に移る
         // 割った結果が1になったら終了
-        int i = 2;
-        int j = n;
-        String k = "";
-        // jが1になるまでループ（nが1以下なら空）
-        loop: while (j > 1){
+        if (2 > n) {
+            throw new IllegalArgumentException("");
+        } else {
+            int i = 2;
+            int j = n;
+            String k = "";
+            // jが1になるまでループ（nが1以下なら空）
+            loop:
+            while (j > 1) {
 //        loop: for (int i = 2; i <= n; i++) {
-            // jがiで割り切れる間ループ
-            while (j % i == 0) {
-                // 割り切れるので約数iを出力kに追記
-                k = k + i;
-                // jに約数iで割った値を代入
-                j = j / i;
-                // jが1になってなければ続きがある、1になったら最後
-                if (j != 1) {
-                    k = k + " ";
-                } else {
-                    break loop;
+                // jがiで割り切れる間ループ
+                while (j % i == 0) {
+                    // 割り切れるので約数iを出力kに追記
+                    k += i;
+                    // jに約数iで割った値を代入
+                    j /= i;
+                    // jが1になってなければ続きがある、1になったら最後
+                    if (j != 1) {
+                        k += " ";
+                    } else {
+                        break loop;
+                    }
                 }
+                i++;
             }
-            i++;
+            return k;
         }
-        return k;
-    }
-
+   }
 }
