@@ -54,6 +54,7 @@ public class Practice021 {
         int sumListJanken;
         int percentRock;
         int percentPaper;
+        int percentScissor;
 
         sumListJanken = sumJanken(listJanken);
         if(sumListJanken == 0) return true;
@@ -61,7 +62,8 @@ public class Practice021 {
         //30%台ということは30%~39%までなので、2桁目が3であるかをみればいい
         percentRock  = listJanken[0] * 10 / sumListJanken;
         percentPaper = listJanken[1] * 10 / sumListJanken;
-        if (percentRock == 3 && percentPaper == 3) {
+        percentScissor = listJanken[2] * 10 / sumListJanken;
+        if (percentRock == 3 && percentPaper == 3 && percentScissor == 3) {
             return false;
         } else {
             return  true;
