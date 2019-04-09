@@ -22,8 +22,9 @@ public class Practice003 {
 
     // 正の偶数、正の奇数、負の偶数、負の奇数のいずれかを返却する
     public static String displayText(int n) {
-
-        return "";
+        String message = n >= 0? "正の" : "負の";
+        message += n % 2 == 0? "偶数" : "奇数";
+        return message;
     }
 
 }
