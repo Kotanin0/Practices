@@ -24,7 +24,7 @@ public class Practice008 {
         // 同じ約数が何度も出てくる可能性ある
         // 割り切れなくなったら次の数に移る
         // 割った結果が1になったら終了
-        if (2 > n) {
+        if (n < 2) {
             throw new IllegalArgumentException("");
         } else {
             int i = 2;
@@ -40,13 +40,14 @@ public class Practice008 {
                     k += i;
                     // jに約数iで割った値を代入
                     j /= i;
-                    // jが1になってなければ続きがある、1になったら最後
-                    if (j != 1) {
-                        k += " ";
-                    } else {
+                    // jが1になったら最後、ならなければ続きがある
+                    if (j == 1) {
                         break loop;
+                    } else {
+                        k += " ";
                     }
                 }
+                // 割り切れなくなったので、iに1加算してループに戻る
                 i++;
             }
             return k;
