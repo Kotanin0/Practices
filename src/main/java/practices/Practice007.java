@@ -10,6 +10,7 @@ package practices;
 public class Practice007 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
+
     }
 
     // 素数判定
