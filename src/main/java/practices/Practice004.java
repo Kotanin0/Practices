@@ -20,7 +20,7 @@ public class Practice004 {
     // 試験の結果を返却する
     public static String showResult(int n) {
 
-        return "";
+        return hogehoge;
     }
 
 }
