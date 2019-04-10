@@ -32,3 +32,4 @@ public class Practice006 {
         }
     }
 }
+// String.trim();
