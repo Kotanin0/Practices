@@ -9,7 +9,7 @@ package practices;
  * 　例）引数を1にした場合の出力は「1 2 3 4 5 6 7 8 9」
  */
 
-public class Practice006 {
+public class    Practice006 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
         String kuku  = showKuku(2);
@@ -25,8 +25,8 @@ public class Practice006 {
         String strKuku = "";
 
         for(int i=1;i<10;i++) {
-            strKuku = strKuku + (n * i);
-            strKuku = strKuku + " ";
+            strKuku +=  (n * i);
+            strKuku +=  " ";
         }
         return strKuku.trim();
     }
