@@ -22,7 +22,7 @@ package practices;
 public class Practice011 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+    System.out.println();
     }
 
     // 奇数のみを返す
