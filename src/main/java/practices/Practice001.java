@@ -2,20 +2,20 @@ package practices;
 
 /**
  * int 型の変数 x、y にそれぞれ数値を入力し
- *
+ * <p>
  * - 和
  * - 差（x－y）
  * - 積
  * - 商
  * - 余り(x÷y)
- *
+ * <p>
  * を求める関数をそれぞれ作成しなさい
  */
 
 public class Practice001 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-  }
+    }
 
     // 和
     public static int wa(int x, int y) {
@@ -34,14 +34,11 @@ public class Practice001 {
 
     // 商
     public static int sho(int x, int y) {
-        if( y == 0) { return 0;
-        } else {return x/y;}
+        return y == 0 ? 0 : x / y;
     }
 
     // 余り
-    public static int amari(int x, int y){
-     if ( y == 0) { return  0;
-     } else { return x % y ;
-    }
+    public static int amari(int x, int y) {
+        return y == 0 ? 0 : x % y;
     }
 }
