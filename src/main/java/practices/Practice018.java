@@ -18,8 +18,17 @@ public class Practice018 {
     }
 
     public static String fizzbuzz(int n) {
-
-        return "";
+        String strFizzBuzz = String.valueOf(n);
+        if (n == 0) {
+            return "";
+        }else if((n % 5 == 0 || strFizzBuzz.contains("5")) && (n % 3 == 0 || strFizzBuzz.contains("3"))){
+            return "fizzbuzz";
+        }else if(n % 5 == 0 || strFizzBuzz.contains("5")){
+            return "buzz";
+        }else if(n % 3 == 0 || strFizzBuzz.contains("3")){
+            return "fizz";
+        }
+            return "";
     }
 
 }

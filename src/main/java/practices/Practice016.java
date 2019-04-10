@@ -15,9 +15,16 @@ public class Practice016 {
     }
 
     // 3の倍数と、3の付く数字なら"fizz"
-    public static String fizz(int n) {
-
+    //文字列に変更しなあかん。
+    public static String fizz(int n){
+        String strFizz = String.valueOf(n);
+        if (n == 0){
+            return "";
+        }else if (n % 3 == 0 || strFizz.contains("3")){
+            return "fizz";
+        }
         return "";
+
     }
 
 }

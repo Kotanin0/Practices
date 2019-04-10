@@ -16,8 +16,12 @@ public class Practice017 {
 
     // 5の倍数と、5の付く数字なら"buzz"
     public static String buzz(int n) {
-
-        return "";
+        String strbuzz = String.valueOf(n);
+        if (n == 0){
+            return "";
+        }else if (n % 5 == 0 || strbuzz.contains("5")){
+            return "buzz";
+        }
+            return "";
+        }
     }
-
-}
