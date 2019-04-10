@@ -30,10 +30,9 @@ public class Practice003 {
             return "負の偶数";
         }else if(n >= 0 && n%2!=0){
             return "正の奇数";
-        }else if(n < 0 && n%2!=0){
+        }else{
             return "負の奇数";
         }
-        return "その他";
     }
 
 }

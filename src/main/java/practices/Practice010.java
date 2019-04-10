@@ -14,7 +14,7 @@ package practices;
 public class Practice010 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        int m = 1; //10進数の入力
+        int m = 18; //10進数の入力
         System.out.println("10進数[ " + m + " ]の2進数 ＝ " + getBinary(m));
     }
 
@@ -32,8 +32,8 @@ public class Practice010 {
 
             for(int i = 0; div >= bin-1 ;i++){
                 mod = div % bin;
-                div = div / bin;
-                binary = String.valueOf(mod) + binary;
+                div /= bin;
+                binary = mod + binary;
 
             }
             return binary;

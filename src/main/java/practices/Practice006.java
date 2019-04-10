@@ -31,8 +31,8 @@ public class Practice006 {
         } else {
             for (int i = 1; i <= 9; i++) {
                 keisan = i * n;
-                kuku = String.valueOf(keisan);
-                kukuResult = kukuResult  + kuku + " ";
+                //kuku = String.valueOf(keisan);
+                kukuResult += keisan + " ";
 
             }
             //後からスペース削除パターン

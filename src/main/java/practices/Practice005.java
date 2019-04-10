@@ -25,7 +25,14 @@ public class Practice005 {
 
     // 試験の結果を返却する
     public static String showResult(int n) {
-        if(n >= 80){
+        //ガード節パターン
+        if(n >= 80) return "優";
+        if(n >= 70) return "良";
+        if(n >= 60) return "可";
+        return "不可";
+
+        //IF文パターン
+/*        if(n >= 80){
             return "優";
         }else if(n >= 70){
             return "良";
@@ -34,6 +41,8 @@ public class Practice005 {
         }else{
             return "不可";
         }
+
+ */
     }
 
 }

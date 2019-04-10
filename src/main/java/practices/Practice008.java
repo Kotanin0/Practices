@@ -26,8 +26,8 @@ public class Practice008 {
             for (int i = 2; n >= i; i++) {
                     while ((m % i) == 0) {
                     System.out.println("因数：" + i);
-                    result = result + " " + String.valueOf(i);
-                    m = m / i;
+                    result += " " + i;
+                    m /= i;
                 }
              }
         }

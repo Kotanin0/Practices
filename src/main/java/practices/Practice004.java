@@ -22,12 +22,14 @@ public class Practice004 {
 
     // 試験の結果を返却する
     public static String showResult(int n) {
+        return n >= 60 ? "合格" : "不合格";
+    /*三項演算子によりIF分省略
         if(n >= 60){
             return "合格";
         }else{
             return "不合格";
         }
-
+    */
     }
 
 }

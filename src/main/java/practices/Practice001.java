@@ -15,7 +15,7 @@ package practices;
 public class Practice001 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        int x = 20 ; int y = 5;
+        int x = 20 ; int y = 0;
         System.out.println("和＝"+ wa(x,y));
         System.out.println("差＝"+ sa(x,y));
         System.out.println("積＝"+ seki(x,y));
