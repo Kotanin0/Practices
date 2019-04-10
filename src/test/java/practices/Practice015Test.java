@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class Practice015Test {
     @Test
     public void 関数geは入力された文字の中にgeとう文字列が含まれていたらTrueをかえす(){
-        assertThat(Practice015.ge("yamagata"),is(true));
+        assertThat(Practice015.ge("yamageta"),is(true));
     }
 
     @Test
