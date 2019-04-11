@@ -20,12 +20,30 @@ package practices;
 public class Practice019 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
+        int yen = 898;
+//        String aaa = "500\r\n100";
+        coincheck(yen);
 
     }
 
     public static String coincheck(int n) {
-
-        return "";
+        if(n <= 0){
+            throw new IllegalArgumentException("引数が0以下を与えれています");
+        }
+        int[] coins = {500,100,50,10,5,1};
+        int[] count = new int[coins.length];
+        String result = "";
+        for(int i = 0 ; i < coins.length ; i++){
+            count[i] = n / coins[i];
+            n = n % coins[i];
+//確認用            System.out.println(coins[i]+"円＝"+count[i] +"枚");
+            if(i < coins.length-1) {
+                result = result + coins[i] + "円＝" + count[i] + "枚\r\n";
+            }else{
+                result = result + coins[i] + "円＝" + count[i] + "枚";
+            }
+        }
+        System.out.println(result);
+        return result;
     }
-
 }
