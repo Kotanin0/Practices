@@ -21,13 +21,9 @@ public class Practice005 {
 
     // 試験の結果を返却する
     public static String showResult(int n) {
-        int yuu = 80;
-        int ryou = 70;
-        int ka = 60;
-
-        if (n >= yuu) return "優";
-        if (n >= ryou) return "良";
-        if (n >= ka) return "可";
+        if (n >= 80) return "優";
+        if (n >= 70) return "良";
+        if (n >= 60) return "可";
 
         return "不可";
     }
