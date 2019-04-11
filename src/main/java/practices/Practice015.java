@@ -21,13 +21,15 @@ public class Practice015 {
     // "ge" という文字列が含まれているならtrue
     public static boolean ge(String str) {
 
-        boolean a = false;
+        return str.contains("ge");
 
-        if(str.contains("ge")){
-            a = true;
-        }
-
-        return a;
+//        boolean a = false;
+//
+//        if(str.contains("ge")){
+//            a = true;
+//        }
+//
+//        return a;
 
     }
 
