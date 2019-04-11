@@ -63,9 +63,9 @@ public class Practice011 {
     }
 
     // Listを配列へ変換
-    public static int[] conversionList(List<Integer> list){
+    public static int[] conversionList(List<Integer> list) {
         int[] nums = new int[list.size()];
-        for(int i = 0; i < nums.length; i++){
+        for (int i = 0; i < nums.length; i++) {
             nums[i] = list.get(i);
         }
         return nums;
