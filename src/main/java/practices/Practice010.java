@@ -13,7 +13,7 @@ package practices;
 public class Practice010 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        System.out.println(getBinary(1));
+        System.out.println(getBinary(18));
     }
 
     // 2進数の文字列を返す
@@ -24,19 +24,19 @@ public class Practice010 {
         }
 
         String result = "";
-        int i = n;
+        //int i = n;
 
         if (n == 0) {
             result = "0";
         }
 
-        while (i != 0) {
-            if (i % 2 == 0) {
+        while (n != 0) {
+            if (n % 2 == 0) {
                 result = 0 + result;
             } else {
                 result = 1 + result;
             }
-            i = i / 2;
+            n = n / 2;
         }
         return result.trim();
     }
