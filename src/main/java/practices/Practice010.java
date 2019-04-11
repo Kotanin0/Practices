@@ -1,5 +1,7 @@
 package practices;
 
+import Utils.ValidateUtils;
+
 /**
  * 入力された整数を2進数に変換する関数 getBinary を作成しなさい
  *
@@ -13,14 +15,17 @@ package practices;
 
 public class Practice010 {
     public static void main(String[] args) {
-        // ここはご自由にお使いください
+        System.out.println(getBinary(18));
 
     }
 
     // 2進数の文字列を返す
     public static String getBinary(int n) {
+        //正の整数チェック
+        ValidateUtils validation = new ValidateUtils();
+        validation.checkPositiveInteger(n);
 
-        return "";
+        return Integer.toBinaryString(n);
     }
 
 }
