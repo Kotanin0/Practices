@@ -27,9 +27,7 @@ public class Practice019 {
     }
 
     public static String coincheck(int n) {
-        if(n <= 0){
-            throw new IllegalArgumentException("引数が0以下を与えれています");
-        }
+        if(n <= 0) return "";
         int[] coins = {500,100,50,10,5,1};
         int[] count = new int[coins.length];
         String result = "";
