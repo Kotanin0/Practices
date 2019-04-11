@@ -38,7 +38,7 @@ public class Practice019 {
               count++;
               n -= coin.getAmount();
           }
-          resultMessage += coin.getAmount() + "円＝" + count + "枚" + br;
+          resultMessage += coin.getLabel() + "＝" + count + "枚" + br;
         }
 
         return resultMessage.trim();
@@ -46,24 +46,29 @@ public class Practice019 {
 
     // コインのEnum（Enumを使いたかったという気持ち）
     protected enum Coin {
-        fiveHundred(500),
-        hundred(100),
-        fifty(50),
-        ten(10),
-        five(5),
-        one(1);
+        fiveHundred(500, "500円"),
+        hundred(100, "100円"),
+        fifty(50, "50円"),
+        ten(10, "10円"),
+        five(5, "5円"),
+        one(1, "1円");
 
         // フィールド定義
         private int amount;
+        private String label;
 
         // コンストラクタ定義
-        Coin(int amount) {
+        Coin(int amount, String label) {
             this.amount = amount;
+            this.label = label;
         }
 
         // げったー
         public int getAmount(){
             return this.amount;
+        }
+        public String getLabel(){
+            return this.label;
         }
     }
 }
