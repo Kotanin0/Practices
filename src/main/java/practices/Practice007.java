@@ -16,7 +16,8 @@ public class Practice007 {
 
     // 素数判定
     public static boolean isPrime(int n) {
-        return true;
+
+        return (n != 1 && n % n == 0 && n % 2 >= 1)  ?  true : false ;
     }
 
 }

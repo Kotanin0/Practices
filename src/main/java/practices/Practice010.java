@@ -14,13 +14,17 @@ package practices;
 public class Practice010 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        System.out.println(getBinary(18));
     }
 
     // 2進数の文字列を返す
     public static String getBinary(int n) {
 
-        return "";
+        String k = "";
+        k = Integer.toBinaryString(n);
+
+        return k;
+
     }
 
 }

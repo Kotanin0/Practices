@@ -12,12 +12,23 @@ public class Practice015 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
 
+        String i = "egen";
+        ge(i);
+
+
     }
 
     // "ge" という文字列が含まれているならtrue
     public static boolean ge(String str) {
 
-        return true;
+        boolean a = false;
+
+        if(str.contains("ge")){
+            a = true;
+        }
+
+        return a;
+
     }
 
 }

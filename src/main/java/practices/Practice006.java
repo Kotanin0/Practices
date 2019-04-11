@@ -13,12 +13,36 @@ public class Practice006 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
 
+        int j =1;
+        showKuku(j);
+        j++;
     }
 
     // 九九の答え
     public static String showKuku(int n) {
 
-        return "";
+        String x = "";
+        String y = "";
+        int e = 0;
+        int i = 1;
+        int k = 0;
+
+        for (i = 2; i < 10; i++) {
+               e = i * n;
+               x = x +" "+ Integer.toString(e);
+
+               }
+
+        k = 1 * n;
+        y = Integer.toString(k);
+
+        return y + x;
+
+               }
+
     }
 
-}
+
+
+
+
