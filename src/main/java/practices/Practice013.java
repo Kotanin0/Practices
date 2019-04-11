@@ -15,7 +15,6 @@ import java.util.Arrays;
 public class Practice013 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
     }
 
     // 並べ替えられた配列を返す

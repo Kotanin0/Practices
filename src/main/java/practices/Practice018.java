@@ -18,8 +18,13 @@ public class Practice018 {
     }
 
     public static String fizzbuzz(int n) {
+        //インスタンス
+        Practice016 fizz = new Practice016();
+        Practice017 buzz = new Practice017();
 
-        return "";
+        String result = fizz.fizz(n) + buzz.buzz(n);
+
+        return result;
     }
 
 }

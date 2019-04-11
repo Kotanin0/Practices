@@ -1,5 +1,7 @@
 package practices;
 
+import Utils.CommonUtils;
+
 /**
  * 3の倍数と、3の付く数字のときに "fizz" と返却する関数 fizz を作成しなさい
  *
@@ -16,8 +18,14 @@ public class Practice016 {
 
     // 3の倍数と、3の付く数字なら"fizz"
     public static String fizz(int n) {
+        //インスタンス
+        CommonUtils common = new CommonUtils();
 
+        if(common.isMultiple(n, 3)) return "fizz";
+        if(String.valueOf(n).contains("3")) return "fizz";
         return "";
     }
+
+
 
 }
