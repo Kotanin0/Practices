@@ -17,19 +17,19 @@ public class Practice006 {
 
 
     public static String showKuku(int n) {
-        if (n > 10 || n <= 0) {
-            throw new IllegalArgumentException();
-        } else {
-            String result = "";
-            for (int i = 1; i <= 9; i++) {
-                if (i != 9) {
-                    result += n * i + " ";
-                } else {
-                    result += n * i;
+            if (n > 10 || n <= 0) {
+                throw new IllegalArgumentException();
+            } else {
+                String result = "";
+                for (int i = 1; i <= 9; i++) {
+                    if (i != 9) {
+                        result += n * i + " ";
+                    } else {
+                        result += n * i;
+                    }
                 }
+                return result;
             }
-            return result;
-        }
     }
 }
 // String.trim();
