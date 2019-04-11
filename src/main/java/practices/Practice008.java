@@ -27,30 +27,29 @@ public class Practice008 {
         if (n < 2) {
             throw new IllegalArgumentException("");
         } else {
-            int i = 2;
-            int j = n;
-            String k = "";
-            // jが1になるまでループ（nが1以下なら空）
-            loop:
-            while (j > 1) {
-//        loop: for (int i = 2; i <= n; i++) {
-                // jがiで割り切れる間ループ
-                while (j % i == 0) {
-                    // 割り切れるので約数iを出力kに追記
-                    k += i;
-                    // jに約数iで割った値を代入
-                    j /= i;
-                    // jが1になったら最後、ならなければ続きがある
-                    if (j == 1) {
-                        break loop;
-                    } else {
-                        k += " ";
-                    }
+            int divisor = 2; // 割り切れる値＝約数の判定
+            int calc = n; // 割っている途中の値
+            String strArgs = ""; // 出力用
+
+            // calcが1になるまでループ（nが1以下なら空）
+//            loop:
+            while (calc > 1) {
+                // calcがdivisorで割り切れる間ループ
+                while (calc % divisor == 0) {
+                    strArgs += divisor; // 割り切れるのでdivisorをstrArgsに追記
+                    calc /= divisor; // calcにdivisorで割った値を代入
+
+                    // calcが1になるまではスペースが必要、1になったら不要
+                    strArgs = strArgs + (calc != 1 ? " " : "");
+//                    if (calc == 1) {
+//                        break loop;
+//                    } else {
+//                        strArgs += " ";
+//                    }
                 }
-                // 割り切れなくなったので、iに1加算してループに戻る
-                i++;
+                divisor++; // divisorで割り切れなくなったので、divisorに1加算してループに戻る
             }
-            return k;
+            return strArgs;
         }
-   }
+    }
 }

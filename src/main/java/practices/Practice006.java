@@ -20,16 +20,16 @@ public class Practice006 {
         if (n < 0) {
             throw new IllegalArgumentException("");
         } else {
-            String Kuku = "";
+            String kuku = "";
             int i = 1;
             while (i <= 9) {
-                Kuku += n * i;
+                kuku += n * i;
                 i++;
                 if (i <= 9) {
-                    Kuku += " ";
+                    kuku += " ";
                 }
             }
-            return Kuku;
+            return kuku;
         }
     }
 }
