@@ -56,6 +56,5 @@ public class Practice019 {
 
         return k.trim();
 
-
     }
 }

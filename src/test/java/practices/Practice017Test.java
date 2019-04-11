@@ -20,8 +20,8 @@ public class Practice017Test {
 
     @Test
     public void buzzは5のつく数字のときにbuzzとかえす(){
-        assertThat(Practice017.buzz(13),is("buzz"));
-        assertThat(Practice017.buzz(-13),is("buzz"));
+        assertThat(Practice017.buzz(15),is("buzz"));
+        assertThat(Practice017.buzz(-15),is("buzz"));
     }
 
     @Test
