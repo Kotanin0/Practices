@@ -35,10 +35,7 @@ public class Practice019Test {
 
     @Test
     public void coincheckは整数をあたえると最小の日本円貨幣枚数となるようにかえす_99999円の場合(){
-        String expected ="10000円=9枚" + br +
-                         "5000円=1枚"  + br +
-                         "1000円=4枚"  + br +
-                         "500円＝1枚"  + br +
+        String expected ="500円＝199枚"  + br +
                          "100円＝4枚"  + br +
                          "50円＝1枚"   + br +
                          "10円＝4枚"   + br +
