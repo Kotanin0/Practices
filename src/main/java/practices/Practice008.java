@@ -22,7 +22,7 @@ public class Practice008 {
         int primes[] = new int[n];
         int primeCount = 0;
         for (int i=2; i<=n; i++) {
-            if (isPrime(i)) {
+            if (Practice007.isPrime(i)) {
                 primes[primeCount++] = i;
             }
         }
@@ -43,15 +43,4 @@ public class Practice008 {
         return result.trim();
     }
 
-    // 素数判定
-    public static boolean isPrime(int n) {
-        if (n == 2) return true;
-        if (n < 2 || n % 2 == 0) return false;
-        for (int i=3; i<n; i+=2) {
-            if (n % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
 }
