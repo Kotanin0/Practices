@@ -1,5 +1,8 @@
 package practices;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * 配列の中身を小さい順に並べ替える関数 sort を作成しなさい
  *
@@ -19,8 +22,20 @@ public class Practice013 {
 
     // 並べ替えられた配列を返す
     public static int[] sort(int[] n) {
-
-        return n;
+        //配列をつくる
+        ArrayList<Integer> sort = new ArrayList<Integer>();
+        for (int i = 0; i < n.length; i++) {
+            sort.add(n[i]);
+        }
+        //int[]型になおす
+        //answerのint[]配列の要素数を決める
+        int[] answer = new int[sort.size()];
+        //2.forをまわす（ArrayListのこうもくがなくなるまで続ける）
+        for (int i = 0; i < sort.size(); i++) {
+            answer[i] = sort.get(i);
+        }
+        //ソートする（小さい順）
+        Arrays.sort(answer);
+        return answer;
     }
-
 }
