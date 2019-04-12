@@ -23,7 +23,7 @@ public class Practice007 {
         } else {
             // nを 整数：2からround(n/2)まで 割っていく
             // nの半分まで割って割り切れれば、何かの倍数（false）
-            // 一度も割り切れなければ奇数（true）
+            // 一度も割り切れなければ素数（true）
             int m = Math.round(n / 2);
             for (int i = 2; i <= m; i++) {
                 if (n % i == 0) {
