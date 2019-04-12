@@ -32,7 +32,6 @@ public class Practice008 {
             String strArgs = ""; // 出力用
 
             // calcが1になるまでループ（nが1以下なら空）
-//            loop:
             while (calc > 1) {
                 // calcがdivisorで割り切れる間ループ
                 while (calc % divisor == 0) {
@@ -41,11 +40,6 @@ public class Practice008 {
 
                     // calcが1になるまではスペースが必要、1になったら不要
                     strArgs = strArgs + (calc != 1 ? " " : "");
-//                    if (calc == 1) {
-//                        break loop;
-//                    } else {
-//                        strArgs += " ";
-//                    }
                 }
                 divisor++; // divisorで割り切れなくなったので、divisorに1加算してループに戻る
             }

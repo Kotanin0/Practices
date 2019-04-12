@@ -24,30 +24,37 @@ public class Practice021 {
     }
 
     public static String janken() {
-        String result = "";
-        int goo = 0;
-        int cyo = 0;
-        int par = 0;
-        int n = 1000; // 試行回数
         Random random = new Random();
-        for (int i = 0; i < n; i++) {
-            switch (random.nextInt(99) % 3) {
-                case 0:
-                    goo += 1;
-                    break;
-                case 1:
-                    cyo += 1;
-                    break;
-                case 2:
-                    par += 1;
-                    break;
+        int jk[] = new int[3]; // じゃんけん結果
+        int jkPer[] = new int[3]; // 実行確率（％、整数値）
+        int i = 0; // 試行回数
+        int n = 10000; // 試行上限
+        boolean noEven = false; // 均等にならない
+        int jkNow;
+        while (jkPer[0] < 30 || jkPer[1] < 30 || jkPer[2] < 30) {
+            i++;
+            jkNow = random.nextInt(n) % 3;
+            jk[jkNow] += 1;
+            jkPer[0] = jk[0] * 100 / i;
+            jkPer[1] = jk[1] * 100 / i;
+            jkPer[2] = jk[2] * 100 / i;
+            // 10,000回やってダメだったら、終わらせて結果発表に移る
+            if (i == n) {
+                noEven = true;
+                break;
             }
         }
+
+        String result = "";
+        String jkWord[] = {"グー", "チョキ", "パー"};
         String br = System.getProperty("line.separator"); // 改行コード指定
-        result = "グー：" + goo + "回（" + goo * 100 / n + "％）" + br
-                + "チョキ：" + cyo + "回（" + cyo * 100 / n + "％）" + br
-                + "パー：" + par + "回（" + par * 100 / n + "％）" + br
-                + "合計：" + n + "回（" + n * 100 / n + "％）";
+
+        if (noEven) result += "試行回数の上限に達しましたが、結果が均等になりませんでした";
+
+        for (int j = 0; j < 3; j++) {
+            result += jkWord[j] + "：" + jk[j] + "回（" + jkPer[j] + "％）" + br;
+        }
+        result += "合計：" + i + "回（100％）";
 
         System.out.println(result);
 
