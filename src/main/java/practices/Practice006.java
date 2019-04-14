@@ -11,14 +11,20 @@ package practices;
 
 public class Practice006 {
     public static void main(String[] args) {
-        // ここはご自由にお使いください
-
+        System.out.println(showKuku(9));
     }
 
     // 九九の答え
     public static String showKuku(int n) {
+        if (n < 1 || n > 9){
+            throw new IllegalArgumentException();
+        }
 
-        return "";
+        String answer = "";
+        for(int i = 1; i < 10; i++){
+            answer += n * i + " ";
+        }
+        return answer.trim();
     }
 
 }
