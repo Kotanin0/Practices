@@ -46,6 +46,7 @@ public class Practice001 {
 
     // 余り
     public static int amari(int x, int y) {
+        //三項演算子　判定？真：偽
         return (y == 0) ? 0: x % y;
 
         //if(y == 0){
