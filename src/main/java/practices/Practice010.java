@@ -13,7 +13,7 @@ package practices;
 public class Practice010 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-//        getBinary(-1);
+        getBinary(-1);
     }
 
     // 2進数の文字列を返す

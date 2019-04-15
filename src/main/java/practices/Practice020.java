@@ -34,16 +34,21 @@ public class Practice020 {
     }
 
     public static boolean isPostNumber(String s) {
+        // 郵便番号：000-0000 または 0000000
+        //
+
 
         return false;
     }
 
     public static boolean isPhoneNumber(String s) {
+        // 電話番号：0X0-0000-0000 or 00-0000-0000 or 000-000-0000 or 0000-00-0000
 
         return false;
     }
 
     public static boolean isMailAddress(String s) {
+        //
 
         return false;
     }
