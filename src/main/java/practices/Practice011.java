@@ -78,8 +78,6 @@ public class Practice011 {
 //確認用
         System.out.println(arrayEvenList);
         System.out.println("偶数要素数 = " + arrayEvenList.size());
-
         return arrayEvenFinal;
     }
-
 }

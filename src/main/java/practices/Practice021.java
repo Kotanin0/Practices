@@ -33,7 +33,7 @@ public class Practice021 {
         double guRatio = 0; double choRatio = 0;double paRatio = 0;
         for(count = 1; count < 100000 ; count++ ) {
             rJ = random.nextInt(3);
-            System.out.print("じゃんけん" + count + "回目：");
+            System.out.print("じゃんけん" + (int)count + "回目：");
             if (rJ == 0) {
                 System.out.println("グー");
                 guCount += 1;

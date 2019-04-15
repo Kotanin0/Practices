@@ -36,8 +36,8 @@ public class Practice006 {
 
             }
             //後からスペース削除パターン
-            kukuResult = kukuResult.trim();
-            return kukuResult;
+            //kukuResult = kukuResult.trim();
+            return kukuResult.trim();
         }
 
     }
