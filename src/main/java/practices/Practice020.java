@@ -62,7 +62,7 @@ public class Practice020 {
 
     public static boolean isMailAddress(String s) {
 
-        return s.matches("..*@.*") && (s.endsWith(".com") || s.endsWith(".co.jp")|| s.endsWith(".ne.jp"));
+        return s.matches(".+.@.+.") && (s.endsWith(".com") || s.endsWith(".co.jp")|| s.endsWith(".ne.jp"));
     }
 
 }
