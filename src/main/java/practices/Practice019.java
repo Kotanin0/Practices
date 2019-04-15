@@ -47,7 +47,7 @@ public class Practice019 {
                 strReturn += coinName[i] + "円＝" + count + "枚" + br;
             }
         }
-        return strReturn;
+        return strReturn.trim();
     }
 
 }

@@ -23,12 +23,11 @@ public class Practice008 {
         }
 
         String StrFactors = "";
-        int Substitute = n;
 
-        for(int i = 2 ; i <=Substitute ; i++){
+        for(int i = 2 ; i <=n ; i++){
             while (n % i == 0){
-                StrFactors = StrFactors + i;
-                StrFactors = StrFactors + " ";
+                StrFactors +=  i;
+                StrFactors +=  " ";
                 n = n / i;
             }
         }

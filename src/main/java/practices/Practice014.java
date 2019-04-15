@@ -13,7 +13,7 @@ public class Practice014 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
     }
-
+    //定義内容を見ると、014
     // うるう年ならtrue
     public static boolean isLeapYear(int n) {
         if(n % 4 == 0 && n % 100 != 0 || n % 400 == 0 ){

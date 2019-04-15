@@ -12,10 +12,11 @@ public class Practice002 {
 
     // 偶数判定
     public static boolean isOdd(int n) {
-        if(n < 0){
+        if (n < 0) {
             throw new IllegalArgumentException("0未満のため出力できません");
         }
         return (n % 2 == 0);
+        //カード節で上記記載する。elseはいらないのです。
     }
-
+        //If (n % 2 == 0) return true;とかとか
 }

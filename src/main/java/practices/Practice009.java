@@ -34,7 +34,7 @@ public class Practice009 {
         int fib0;
         int fib1 = 0;
         int fib2 = 1;
-        String sFibonacci = Integer.toString(fib1) + " " + Integer.toString(fib2) + " ";
+        String sFibonacci = Integer.valueOf(fib1) + " " + Integer.valueOf(fib2) + " ";
 
         while (fib1 + fib2 <= n) {
             fib0 = fib1 + fib2;
