@@ -1,5 +1,8 @@
 package practices;
 
+
+import java.util.Random;
+
 /**
  * おそらく素数判定関数の100000回の実行速度がとても遅いはずなので、速くしなさい
  */
@@ -9,40 +12,37 @@ public class Practice023 {
 
 
         long start = System.nanoTime();
-        factorization(100000);
+
+        for (int j = 0; j <= 100000; j++) {
+            Random r = new Random();
+            isPrime(r.nextInt(100000));
+        }
         long end = System.nanoTime();
-        System.out.println("練習23の処理時間"+((end- start)/1000)+"ms");
-        // ここはご自由にお使いください
+        System.out.println("練習23の処理時間" + ((end - start) / 1000) + "ms");
 
 //        start = System.nanoTime();
-//        Practice022.factorization(100000);
+//        for (int j = 0; j <= 100000; j++) {
+//            Practice022.isPrime(10);
+//        }
 //        end = System.nanoTime();
-//        System.out.println("練習22の処理時間"+((end- start)/1000)+"ms");
+//        System.out.println("練習22の処理時間" + ((end - start) / 1000) + "ms");
+
 
     }
 
-
-    public static String factorization(int n) {
-
-        String y = "";
-        String x = "";
-
-        for (int i = 2; n >= i; i++) {
-            while ((n % i) == 0) {
-                n = n / i;
-                if (n == 1) {
-                    y = y + x;
-                } else {
-                    y = y + x + " ";
-                }
+    public static boolean isPrime(int n) {
+        if (n < 2) {
+            return false;
+        }
+        double k = Math.sqrt(n);
+        for (int i = 3; i < k ; i++) {
+            if (n % i == 0) {
+                return false;
             }
         }
-        return y;
+        return true;
     }
 }
-
-
-// x = Integer.toString(i);
 
 
 
