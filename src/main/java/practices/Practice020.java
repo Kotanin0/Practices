@@ -36,28 +36,32 @@ public class Practice020 {
     }
 
     public static boolean isPostNumber(String s) {
-        String pattern = "[0-9]{3}-[0-9]{4}";
-        String pattern2 = "[0-9]{7}";
-        Pattern p = Pattern.compile(pattern);
-        Pattern q = Pattern.compile(pattern2);
-        Matcher a = p.matcher(s);
-        Matcher b = q.matcher(s);
 
-        return a.matches() || b.matches();
+        //もっとシンプルに書いてみる
+        //String pattern = "[0-9]{3}-[0-9]{4}";
+        //String pattern2 = "[0-9]{7}";
+        //Pattern p = Pattern.compile(pattern);
+        //Pattern q = Pattern.compile(pattern2);
+        //Matcher a = p.matcher(s);
+        //Matcher b = q.matcher(s);
+
+        return s.matches("[0-9]{3}-[0-9]{4}") || s.matches("[0-9]{7}");
     }
 
     public static boolean isPhoneNumber(String s) {
-        String pattern = "[0-9]{11}";
-        String pattern2 = "[0-9]{3}-[0-9]{4}-[0-9]{4}";
-        String pattern3 = "[0-9]{2}-[0-9]{4}-[0-9]{4}";
-        Pattern p = Pattern.compile(pattern);
-        Pattern q = Pattern.compile(pattern2);
-        Pattern r = Pattern.compile(pattern3);
-        Matcher a = p.matcher(s);
-        Matcher b = q.matcher(s);
-        Matcher c = r.matcher(s);
 
-        return a.matches() || b.matches() || c.matches();
+        //もっとシンプルに書いてみる
+       // String pattern = "[0-9]{11}";
+       // String pattern2 = "[0-9]{3}-[0-9]{4}-[0-9]{4}";
+       // String pattern3 = "[0-9]{2}-[0-9]{4}-[0-9]{4}";
+        // Pattern p = Pattern.compile(pattern);
+        //Pattern q = Pattern.compile(pattern2);
+        //Pattern r = Pattern.compile(pattern3);
+        //Matcher a = p.matcher(s);
+        //Matcher b = q.matcher(s);
+        //Matcher c = r.matcher(s);
+
+        return s.matches("[0-9]{11}") || s.matches("[0-9]{3}-[0-9]{4}-[0-9]{4}") || s.matches("[0-9]{2}-[0-9]{4}-[0-9]{4}");
     }
 
     public static boolean isMailAddress(String s) {
