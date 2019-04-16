@@ -10,8 +10,6 @@ package practices;
  * 　　　返却：10010
  */
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Practice010 {
     public static void main(String[] args) {
