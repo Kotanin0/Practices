@@ -24,7 +24,7 @@ public class Practice005 {
         if (n >= 80) return "優";
         if (n >= 70) return "良";
         if (n >= 60) return "可";
-        else return "不可";
+        return "不可";
         }
     }
 

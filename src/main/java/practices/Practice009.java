@@ -13,7 +13,7 @@ package practices;
 public class Practice009 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        //System.out.println(showFibonacci(1));
+        System.out.println(showFibonacci(12));
 
     }
 
@@ -29,7 +29,7 @@ public class Practice009 {
 
         while (a1 + a2 <= n) {
             a3 = a1 + a2;
-            answer += String.valueOf(a3) + " ";
+            answer += a3 + " ";
             a1 = a2;
             a2 = a3;
         }

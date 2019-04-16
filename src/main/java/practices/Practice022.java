@@ -7,7 +7,7 @@ package practices;
 public class Practice022 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        int answer=0;
+        int answer = 0;
         long start = System.currentTimeMillis();
         //long start = System.nanoTime();
         for (int i = 1; i <= 100000; i++) {
@@ -19,7 +19,7 @@ public class Practice022 {
         //System.out.println(start + "ms");
         //System.out.println(end + "ms");
         System.out.println((end - start) + "ms");
-        System.out.println( answer + "回");
+        System.out.println(answer + "回");
     }
 
     public static int isPrime(int n) {
