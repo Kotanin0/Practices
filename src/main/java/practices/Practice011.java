@@ -1,6 +1,6 @@
 package practices;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * 配列の中身を奇数と偶数に分類する関数 getOdd, getEven を作成しなさい
@@ -24,43 +24,32 @@ import java.util.ArrayList;
 public class Practice011 {
     public static void main(String[] args) {
         // ここはご自由にお使いくだい
-        int[] TestArray1_arg =      new int[] {0,1,2,3,4,5,6,7,8,9};
-        int data[];
-
-        data = getOdd(TestArray1_arg);
-        for(int i=0;i<data.length;i++){
-            System.out.println(data[i]);
-        }
     }
 
-    public static int[] arrayLstToList(ArrayList<Integer> X){
-        int[] returnList = new int[X.size()];
-
-        for (int i = 0; i < X.size(); i++) {
-            returnList[i] = X.get(i); // Integer
-        }
-        return returnList;
-    }
-
-    // 奇数のみを返す
     public static int[] getOdd(int[] n) {
-        ArrayList<Integer> arrayOdd = new ArrayList<Integer>();
-        for(int i = 0; i < n.length; i++) {
-            if(n[i] % 2 != 0) {
-                arrayOdd.add(n[i]);
+        int[ ] x = new int[n.length];
+        int arraySize =0;
+
+        for(int valueN : n) {
+            if(valueN % 2 != 0) {
+                x[arraySize] = valueN;
+                arraySize++;
             }
         }
-        return arrayLstToList(arrayOdd);
+        return Arrays.copyOf(x, arraySize);
     }
 
     // 偶数のみを返す
     public static int[] getEven(int[] n) {
-        ArrayList<Integer> arrayEven = new ArrayList<Integer>();
-        for(int i = 0; i < n.length; i++){
-            if(n[i] % 2 == 0){
-                arrayEven.add(n[i]);
+        int[ ] x = new int[n.length];
+        int arraySize =0;
+
+        for(int valueN : n) {
+            if(valueN % 2 == 0) {
+                x[arraySize] = valueN;
+                arraySize++;
             }
         }
-        return arrayLstToList(arrayEven);
+        return Arrays.copyOf(x, arraySize);
     }
 }
