@@ -16,8 +16,9 @@ public class Practice017 {
 
     // 5の倍数と、5の付く数字なら"buzz"
     public static String buzz(int n) {
+        if (n == 0) return "";
+        if ((n % 5 == 0) || (String.valueOf(n).contains("5"))) return "buzz";
 
         return "";
+        }
     }
-
-}
