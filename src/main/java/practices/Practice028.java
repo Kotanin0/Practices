@@ -52,15 +52,10 @@ public class Practice028 {
 
     //一番単価の高い果物を返す関数
     public static Fruits maxFruitsPrice(List<Fruits> fruits) {
-        int maxPrice = 0;
-        int indexFruits = 0;
-        for (int i = 0; i < fruits.size(); i++) {
-            if (fruits.get(i).getPrice() > maxPrice) {
-                maxPrice = fruits.get(i).getPrice();
-                indexFruits = i;
-            }
-        }
-        return fruits.get(indexFruits);
+        List<Fruits> x = fruits.stream()
+                .sorted((fruit1, fruit2) -> fruit2.getPrice() - fruit1.getPrice())
+                .collect(Collectors.toList());
+        return x.get(0);
     }
 
     //任意の色の果物を返す関数
