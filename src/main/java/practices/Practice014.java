@@ -17,7 +17,25 @@ public class Practice014 {
     // うるう年ならtrue
     public static boolean isLeapYear(int n) {
 
-        return true;
+            boolean isLeapYear = false;
+
+            if (n % 4 == 0) {
+
+                if ((n % 100) == 0) {
+
+                    if ((n % 400) == 0) {
+                        // うるう年
+                        isLeapYear = true;
+                    }
+
+                } else {
+                    // うるう年
+                    isLeapYear = true;
+                }
+
+            }
+        return isLeapYear;
+        }
+
     }
 
-}
