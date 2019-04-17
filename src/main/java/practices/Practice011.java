@@ -28,12 +28,11 @@ public class Practice011 {
 
     public static int[] getOdd(int[] n) {
         int[ ] x = new int[n.length];
-        int arraySize =0;
 
+        int arraySize =0;
         for(int valueN : n) {
             if(valueN % 2 != 0) {
-                x[arraySize] = valueN;
-                arraySize++;
+                x[arraySize++] = valueN;
             }
         }
         return Arrays.copyOf(x, arraySize);
@@ -42,12 +41,11 @@ public class Practice011 {
     // 偶数のみを返す
     public static int[] getEven(int[] n) {
         int[ ] x = new int[n.length];
-        int arraySize =0;
 
+        int arraySize =0;
         for(int valueN : n) {
             if(valueN % 2 == 0) {
-                x[arraySize] = valueN;
-                arraySize++;
+                x[arraySize++] = valueN;
             }
         }
         return Arrays.copyOf(x, arraySize);
