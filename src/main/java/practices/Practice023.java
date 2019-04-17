@@ -30,7 +30,7 @@ public class Practice023 {
 
         double sqrtNum = Math.sqrt(n);
         int count = 0;
-        //平方根より下回る値は徐算する（余りを求める）必要がない＆2の倍数は除外しているので2ずつカウント
+//平方根より下回る値は徐算する（余りを求める）必要がない＆2の倍数は除外しているので2ずつカウント
         for (int i = 3; i <= sqrtNum ; i += 2) {
             count ++;
             if (n % i == 0){

@@ -19,21 +19,15 @@ public class Practice013 {
         for(int g : ex) {
             System.out.println(g);
         }
-
         sort(ex);
     }
 
     // 並べ替えられた配列を返す
     public static int[] sort(int[] n) {
 
-        //Arrayクラスのソートを使用した場合
-/*
-        Arrays.sort(n);
-        for (int h: n){
-            System.out.println(h);
-        }
-*/
+//Arrayクラスのソートを使用した場合
 
+//        Arrays.sort(n);
 
 // ライブラリ使わず
 

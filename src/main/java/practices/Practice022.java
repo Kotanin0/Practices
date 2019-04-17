@@ -17,7 +17,7 @@ public class Practice022 {
             //System.out.println("実行回数"+ i +"回目（引数）：累計除算回数："+ count);
         }
         long end = System.currentTimeMillis();
-        System.out.println("徐算回数"+ count + "回");
+        System.out.println("除算回数"+ count + "回");
         System.out.println("処理時間：" + (end - start) + "ms");
         System.out.println();
 

@@ -14,26 +14,21 @@ package practices;
 public class Practice018 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        int test = 13;
+        int test = 51;
         System.out.println(fizzbuzz(test));
     }
 
     public static String fizzbuzz(int n) {
-/*
-        String str = String.valueOf(n);
-        if(n ==0) return "";
-        if((str.contains("5") || n % 5 == 0) && (str.contains("3") || n % 3 == 0)) return "fizzbuzz";
-        if ( n % 5 == 0 ||str.contains("5")) return "buzz";
-        if (n % 3 == 0 || str.contains("3")) return "fizz";
-        return "";
-*/
-//違うやり方
-
-        if((Practice016.fizz(n) == "fizz" ) && Practice017.buzz(n) == "buzz") return "fizzbuzz";
-        if(Practice016.fizz(n) == "fizz") return "fizz";
-        if(Practice017.buzz(n)=="buzz") return "buzz";
-        return "";
-
+//そもそもがブランクか文字列を返すだからreturn文は1つで良い！！
+        return Practice016.fizz(n) + Practice017.buzz(n);
     }
-
 }
+
+/*備忘録として残す＿改善前のソース
+//１６，１７のどちらからも返ってきたらfizzbuzzをreturn
+        if((Practice016.fizz(n) == "fizz" ) && Practice017.buzz(n) == "buzz") return "fizzbuzz";
+//
+        if(Practice017.buzz(n)=="buzz") return "buzz";
+//上2つのどちらでもない場合、3の倍数かチェックし、空かfizzをreturnする
+        return Practice016.fizz(n);
+*/

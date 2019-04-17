@@ -1,6 +1,6 @@
 package practices;
+
 import java.util.Random;
-import java.lang.Math;
 
 /**
  * ランダムで「グー」「チョキ」「パー」のいずれかを出力する関数
@@ -18,44 +18,39 @@ import java.lang.Math;
  *
  */
 
-public class Practice021 {
+public class Practice021_ver2 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        janken();
+        System.out.println(janken());
     }
 
     public static String janken() {
         int guCount = 0; int choCount = 0 ; int paCount = 0;
         Random random = new Random();
-        double count ; double rJ ;
-        double guRatio  ; double choRatio  ;double paRatio  ;
-        for(count = 1;  ; count++ ) {
+        double count=0 ; double rJ ;
+        double guRatio = 0   ; double choRatio = 0  ;double paRatio =0 ;
+        while(!(isRange(guRatio) && isRange(choRatio) && isRange(paRatio) )) {
+            count++;
             rJ = random.nextInt(3);
-            System.out.print("じゃんけん" + (int) count + "回目：");
             if (rJ == 0) {
-                System.out.println("グー");
                 guCount += 1;
             } else if (rJ == 1) {
-                System.out.println("チョキ");
                 choCount += 1;
             } else {
-                System.out.println("パー");
                 paCount += 1;
             }
             guRatio = guCount / count;
             choRatio = choCount / count;
             paRatio = paCount / count;
-            if ((guRatio >= 0.3 && guRatio < 0.4) && (choRatio >= 0.3 && choRatio < 0.4) && (paRatio >= 0.3 && paRatio < 0.4)) break;
-            if (count > 10000000) break;
         }
 
         int totalRatioPrint = (int)(count/count * 100);
-        System.out.println("グー：" + guCount+ "回"+ " (" + Math.round(guRatio * 100) + "%) ");
-        System.out.println("チョキ：" + choCount+ "回"+ " (" + Math.round(choRatio * 100) + "%) ");
-        System.out.println("パー：" + paCount+ "回"+ " (" + Math.round(paRatio*100) + "%) ");
-        System.out.println("合計：" + Math.round(count) + "回"+ " (" + totalRatioPrint + "%) ");
-
-        return "";
+        return "グー：" + guCount+ "回"+ " (" + Math.round(guRatio * 100) + "%) \r\n" + "チョキ：" + choCount+ "回"+ " (" + Math.round(choRatio * 100) + "%) \r\n" + "パー：" + paCount+ "回"+ " (" + Math.round(paRatio*100) + "%) \r\n"+"合計：" + Math.round(count) + "回"+ " (" + totalRatioPrint + "%) ";
     }
+
+    public static boolean isRange(double ratio){
+        return 0.3 <= ratio && 0.4 > ratio;
+    }
+
 
 }

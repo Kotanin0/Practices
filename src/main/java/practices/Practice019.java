@@ -20,8 +20,7 @@ package practices;
 public class Practice019 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        int yen = 898;
-//        String aaa = "500\r\n100";
+        int yen = 398;
         coincheck(yen);
 
     }
@@ -33,12 +32,12 @@ public class Practice019 {
         String result = "";
         for(int i = 0 ; i < coins.length ; i++){
             count[i] = n / coins[i];
-            n = n % coins[i];
-//確認用            System.out.println(coins[i]+"円＝"+count[i] +"枚");
+            n %= coins[i];
+
             if(i < coins.length-1) {
-                result = result + coins[i] + "円＝" + count[i] + "枚\r\n";
+                result += coins[i] + "円＝" + count[i] + "枚\r\n";
             }else{
-                result = result + coins[i] + "円＝" + count[i] + "枚";
+                result += coins[i] + "円＝" + count[i] + "枚";
             }
         }
         System.out.println(result);

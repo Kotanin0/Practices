@@ -36,7 +36,7 @@ public class Practice011_ver2 {
 
     public static int[] getOdd(int[] n){
         int count = 0; int k = 0;
-//偶数の要素数をチェック
+//奇数の要素数をチェック
         for (int odd : n) {
             if (odd % 2 != 0) count++;
         }
@@ -44,11 +44,10 @@ public class Practice011_ver2 {
         int[] oddResult = new int[count];
         for (int i : n ) {
             if (i % 2 != 0) {
-                oddResult[k] = i;
-                k++;
+                oddResult[k++] = i;;
             }
         }
-//振り分け結果表示用
+//奇数振り分け結果表示用
         System.out.println("【奇数要素】");
         for (int i = 0; i < count ; i++) {
             System.out.print(oddResult[i]+ " ");
@@ -65,11 +64,10 @@ public class Practice011_ver2 {
         int[] evenResult = new int[count];
         for (int i : n ) {
             if ( i % 2 == 0) {
-                evenResult[k] = i;
-                k++;
+                evenResult[k++] = i;
             }
         }
-//振り分け結果表示用
+//偶数振り分け結果表示用
         System.out.println("【偶数要素】");
         for (int i : evenResult) {
             System.out.print(i+ " ");

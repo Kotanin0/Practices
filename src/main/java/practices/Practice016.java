@@ -23,8 +23,7 @@ public class Practice016 {
 //文字列変換ケース
 
         String str = String.valueOf(n);
-        if(n != 0 && n % 3 == 0) return "fizz";
-        if(str.contains("3"))  return "fizz";
+        if((n != 0 && n % 3 == 0) || (str.contains("3"))) return "fizz";
         return "";
 
 //整数のままケース　for文でくくったとしても10^n桁が増えるとがきりがない
