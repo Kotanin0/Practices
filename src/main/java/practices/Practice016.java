@@ -16,8 +16,9 @@ public class Practice016 {
     // 3の倍数と、3の付く数字なら"fizz"
     public static String fizz(int n) {
         String fizzFizz = "";
-
-        if (n % 3 == 0) {
+        if (n == 0) {
+            fizzFizz = "";
+        } else if (n % 3 == 0) {
             fizzFizz = "fizz";
         } else {
             String s = String.valueOf(n);
