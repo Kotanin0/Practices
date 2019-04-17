@@ -50,3 +50,5 @@ public class Practice010 {
 // 10010 を出力
 //　数列の前（左側に）数値を追加していく必要があるの。そして、数列の長さがさだまっていない。きゃ。
 
+// Integer.toBinaryStrong(n);
+
