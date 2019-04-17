@@ -20,74 +20,22 @@ import java.util.List;
 public class Practice024 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        ArrayList<String> prefectureName47 = new ArrayList<String>();
-        String[] n = {"北海道", "青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県", "茨城県", "栃木県", "群馬県",
+        ArrayList<String> prefectureName47 = new ArrayList<String>(Arrays.asList("北海道", "青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県", "茨城県", "栃木県", "群馬県",
                 "埼玉県", "千葉県", "東京都", "神奈川県", "新潟県", "富山県", "石川県", "福井県", "山梨県", "長野県",
                 "岐阜県", "静岡県", "愛知県", "三重県", "滋賀県", "京都府", "大阪府", "兵庫県", "奈良県", "和歌山県",
                 "鳥取県", "島根県", "岡山県", "広島県", "山口県", "徳島県", "香川県", "愛媛県", "高知県", "福岡県",
-                "佐賀県", "長崎県", "熊本県", "大分県", "宮崎県", "鹿児島県", "沖縄県"};
-        for (int i = 0; i < n.length; i++) {
-            prefectureName47.add(n[i]);
-        }
-        getListCapital(prefectureName47);
-        getListHokkaido(prefectureName47);
-        getListCabinet(prefectureName47);
-        getListPrefecture(prefectureName47);
+                "佐賀県", "長崎県", "熊本県", "大分県", "宮崎県", "鹿児島県", "沖縄県"));
+        System.out.println(getListprefectureName(prefectureName47, "県"));
     }
 
-    public static List<String> getListCapital(List<String> prefectureName47) {
-        String[] x = new String[prefectureName47.size()];
-        int arraysize = 0;
+    public static List<String> getListprefectureName(List<String> prefectureName47, String Capital) {
+        ArrayList<String> prefectureName = new ArrayList<String>();
         for (int i = 0; i < prefectureName47.size(); i++) {
-            if (prefectureName47.get(i).endsWith("都")) {
-                x[arraysize] = prefectureName47.get(i);
-                arraysize++;
+            if (prefectureName47.get(i).endsWith(Capital)) {
+                prefectureName.add(prefectureName47.get(i));
             }
         }
-        List<String> listTo = Arrays.asList(x);
-        System.out.println(listTo);
-        return listTo;
-    }
-
-    public static List<String> getListHokkaido(List<String> prefectureName47) {
-        String[] x = new String[prefectureName47.size()];
-        int arraysize = 0;
-        for (int i = 0; i < prefectureName47.size(); i++) {
-            if (prefectureName47.get(i).endsWith("道")) {
-                x[arraysize] = prefectureName47.get(i);
-                arraysize++;
-            }
-        }
-        List<String> listDo = Arrays.asList(x);
-        System.out.println(listDo);
-        return listDo;
-    }
-
-    public static List<String> getListCabinet(List<String> prefectureName47) {
-        String[] x = new String[prefectureName47.size()];
-        int arraysize = 0;
-        for (int i = 0; i < prefectureName47.size(); i++) {
-            if (prefectureName47.get(i).endsWith("府")) {
-                x[arraysize] = prefectureName47.get(i);
-                arraysize++;
-            }
-        }
-        List<String> listHu = Arrays.asList(x);
-        System.out.println(listHu);
-        return listHu;
-    }
-
-    public static List<String> getListPrefecture(List<String> prefectureName47) {
-        String[] x = new String[prefectureName47.size()];
-        int arraysize = 0;
-        for (int i = 0; i < prefectureName47.size(); i++) {
-            if (prefectureName47.get(i).endsWith("県")) {
-                x[arraysize] = prefectureName47.get(i);
-                arraysize++;
-            }
-        }
-        List<String> listKen = Arrays.asList(x);
-        System.out.println(listKen);
-        return listKen;
+        //System.out.println(prefectureName);
+        return prefectureName;
     }
 }
