@@ -57,6 +57,6 @@ public class Practice020 {
     }
 
     public static boolean isMailAddress(String s) {
-        return s.matches("^..*@.*(\\.com|\\.co.jp|\\.ne.jp)$");
+        return s.matches("^..*@.*(\\.com|\\.co\\.jp|\\.ne\\.jp)$");
     }
 }
