@@ -32,23 +32,6 @@ public class Practice012 {
         Arrays.sort(n); //プリミティブ型の配列は昇順しかソートできない。
         return n;
     }
-
-
-// ライブラリ使わず
-/*バブルソートで並び替えする場合
-        for(int i = 0; i < n.length ; i++){
-            for(int k = i; k < n.length; k++){
-                if(n[k] < n[i]) {
-                    int a = n[k];
-                    n[k] = n[i];
-                    n[i] = a;
-                }
-            }
-            System.out.println("配列番号"+ i + "値" +n[i]);
-        }
-        return n;
-    }*/
-
     public static void printData(int[] n){
         //並び替え結果の表示
         System.out.print("[ ");

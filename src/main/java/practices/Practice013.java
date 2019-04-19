@@ -25,12 +25,7 @@ public class Practice013 {
     // 並べ替えられた配列を返す
     public static int[] sort(int[] n) {
 
-//Arrayクラスのソートを使用した場合
-
-//        Arrays.sort(n);
-
 // ライブラリ使わず
-
         for(int i = 0; i < n.length ; i++){
             for(int k = i; k < n.length; k++){
                 if(n[k] < n[i]) {
@@ -41,7 +36,6 @@ public class Practice013 {
             }
             System.out.println("配列番号"+ i + "値" +n[i]);
         }
-
         return n;
     }
 }
