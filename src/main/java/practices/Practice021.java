@@ -28,33 +28,39 @@ public class Practice021 {
 
         Random rand = new Random();
         String te = "";
-        double i = 0;
+        double totalCount = 0;
         int guCount = 0;
         int tyokiCount = 0;
         int paCount = 0;
-        String kotae = "";
+        String result = "";
         String br = System.getProperty("line.separator");
 
-        while (i <= 999) {
+        while ((30 > Math.round(guCount / totalCount * 100) || 39 < Math.round(guCount / totalCount * 100))
+                || (30 > Math.round(tyokiCount / totalCount * 100) || 39 < Math.round(tyokiCount / totalCount * 100))
+                || (30 > Math.round(paCount / totalCount * 100) || 39 < Math.round(paCount / totalCount * 100))) {
+
             int ransuu = rand.nextInt(3);
             switch (ransuu) {
                 case 0://グーの時
                     guCount++;
+                    totalCount++;
                     break;
                 case 1://チョキの時
                     tyokiCount++;
+                    totalCount++;
                     break;
                 case 2://パーの時
                     paCount++;
+                    totalCount++;
                     break;
             }
-            i++;
+
         }
-        System.out.println(kotae = "グー：" + guCount + "回  " + Math.round(guCount / i * 100) + "％" + br
-                + "チョキ：" + tyokiCount + "回　" + Math.round(tyokiCount / i * 100) + "％" + br
-                + "パー：" + paCount + "回　" + Math.round(paCount / i * 100) + "％" + br
-                + "合計：" + Math.round(i) + "回 " + Math.round(i / i * 100) + "％");
-        return kotae;
+        System.out.println(result = "グー：" + guCount + "回  " + Math.round(guCount / totalCount * 100) + "％" + br
+                + "チョキ：" + tyokiCount + "回　" + Math.round(tyokiCount / totalCount * 100) + "％" + br
+                + "パー：" + paCount + "回　" + Math.round(paCount / totalCount * 100) + "％" + br
+                + "合計：" + Math.round(totalCount) + "回 " + Math.round(totalCount / totalCount * 100) + "％");
+        return result;
     }
 
 }
