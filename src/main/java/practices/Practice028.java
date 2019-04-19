@@ -23,6 +23,7 @@ public class Practice028 {
         List<Fruits> maxPriceFruits = maxPriceFruitsNonStream(fruitsArrayList);
         maxPriceFruits.forEach(i -> i.printCheckFruits(maxPriceFruits));
 */
+
         System.out.println("【一番単価の高い果物を返す関数Stream使用した場合】");
         List<Fruits> maxPriceFruits = maxPriceFruitsCheck(fruitsArrayList);
         maxPriceFruits.forEach(i -> i.printCheckFruits()); //備忘録）ラムダ式だとインデックス番号をカウント++で与えられない

@@ -13,7 +13,7 @@ import java.util.List;
 public class Practice027 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        List<Fruits> fruitsArrayList = FruitsList();
+        FruitsList();
     }
 
     public static List<Fruits> FruitsList(){
@@ -21,15 +21,15 @@ public class Practice027 {
 
         fruitsList.add(new Fruits("りんご", "apple", "赤", 100, 300));
         fruitsList.add(new Fruits("みかん", "orange", "オレンジ", 30, 1000));
-        fruitsList.add(new Fruits("メロン", "melon", "緑", 5000, 10));
+        fruitsList.add(new Fruits("静岡産マスクメロン", "melon", "緑", 5000, 1000));
         fruitsList.add(new Fruits("キウイ", "kiwi", "緑", 150, 3000));
         fruitsList.add(new Fruits("桃", "peach", "ピンク", 180, 100));
         fruitsList.add(new Fruits("マスカット", "muscat", "薄緑", 300, 50));
-        fruitsList.add(new Fruits("ブドウ", "grape", "紫", 200, 100));
+        fruitsList.add(new Fruits("ブドウ", "grape", "紫", 200, 0));
         fruitsList.add(new Fruits("梨", "pear", "薄黄", 90, 100));
         fruitsList.add(new Fruits("さくらんぼ", "cherry", "赤", 150, 200));
         fruitsList.add(new Fruits("マンゴー", "mango", "黄", 20, 500));
-        fruitsList.add(new Fruits("マンゴスチン", "mangosteen", "白紫", 5000, 0));
+        fruitsList.add(new Fruits("インドネシア産マンゴスチン", "mangosteen", "白紫", 5000, 100));
         fruitsList.add(new Fruits("ザクロ", "pomegranate", "赤", 50, 10));
 
 /*

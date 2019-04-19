@@ -47,10 +47,11 @@ public class Fruits {
     public void printCheckFruits(){
         System.out.println("日本名：" + this.fruitsName + "、英名：" + this.fruitsEnglishName + "、色：" + this.fruitsColor + "、価格："
                 + this.fruitsUnitPrice + "、在庫数：" + this.fruitsStock);
+    }
 
-//        n.stream()
-//                .forEach(i -> System.out.println("日本名：" + this.fruitsName + "、英名：" + this.fruitsEnglishName + "、色：" + this.fruitsColor + "、価格："
-//                        + this.fruitsUnitPrice + "、在庫数：" + this.fruitsStock));
+    public void printThanksForBuyingExpensiveFruitsMessage(){
+        System.out.println(this.fruitsName + "("+ this.fruitsUnitPrice +")円 "+ this.fruitsStock +"個 ");
+        this.fruitsStock = 0;
     }
 
 }
