@@ -2,7 +2,6 @@ package practices;
 
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * 果物クラスを利用して、果物を10種類程度保持する果物リストを作成してください
  * <p>

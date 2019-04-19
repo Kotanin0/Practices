@@ -1,7 +1,5 @@
 package practices;
 
-import java.util.List;
-
 /**
  * 果物クラス
  * - 果物名（日本語
@@ -46,7 +44,6 @@ public class Fruits {
     public int getFruitsstock(){
         return this.fruitsStock;
     }
-
     public void printCheckFruits(){
         System.out.println("日本名：" + this.fruitsName + "、英名：" + this.fruitsEnglishName + "、色：" + this.fruitsColor + "、価格："
                 + this.fruitsUnitPrice + "、在庫数：" + this.fruitsStock);

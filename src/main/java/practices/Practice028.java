@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
  */
 
 public class Practice028 {
-
     public static void main(String[] args) {
         // ここはご自由にお使いください
 //果物リストを準備
