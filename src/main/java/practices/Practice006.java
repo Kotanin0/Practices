@@ -1,5 +1,7 @@
 package practices;
 
+import java.util.stream.IntStream;
+
 /**
  * 九九の答えを表示する関数 showKuku を作成しなさい
  * <p>
@@ -25,9 +27,8 @@ public class Practice006 {
         } else {
             for (int i = 1; i < 10; i++) {
                 kk = n * i;
-                kukuResult += String.valueOf(kk) + " ";
+                kukuResult += (kk) + " ";
             }
-
             return kukuResult.trim();
         }
     }

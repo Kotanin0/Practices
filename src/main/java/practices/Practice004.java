@@ -14,12 +14,12 @@ package practices;
 public class Practice004 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        System.out.println(showResult(70));
     }
 
     // 試験の結果を返却する
+    //三項演算子
     public static String showResult(int n) {
-        return n >= 60 ? "合格":"不合格";
+        return n >= 60 ? "合格" : "不合格";
     }
-
 }

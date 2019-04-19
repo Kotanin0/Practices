@@ -17,12 +17,16 @@ package practices;
 public class Practice003 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
+        System.out.println(displayText(10));
 
     }
 
     // 正の偶数、正の奇数、負の偶数、負の奇数のいずれかを返却する
     public static String displayText(int n) {
-        return (n % 2 == 0 && n >= 0) ? "正の偶数" : (n % 2 == 0 && 0 > n) ? "負の偶数" : (n % 2 != 0 && n > 0) ? "正の奇数" : "負の奇数";
+        String answer = n >= 0 ? "正の" : "負の";
+        answer += n % 2 == 0 ? "偶数" : "奇数";
+        return answer;
+        //return (n % 2 == 0 && n >= 0) ? "正の偶数" : (n % 2 == 0 && 0 > n) ? "負の偶数" : (n % 2 != 0 && n > 0) ? "正の奇数" : "負の奇数";
     }
 }
 

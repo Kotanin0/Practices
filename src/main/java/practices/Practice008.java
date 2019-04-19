@@ -27,7 +27,7 @@ public class Practice008 {
                 //素数で割っていく
                 //for (int j = 1; n / j == 0; j++) {
                 while (n % i == 0) {
-                    answer += String.valueOf(i) + " ";
+                    answer +=i + " ";
                     n = n / i;
                 }
             }
@@ -35,6 +35,5 @@ public class Practice008 {
         answer = answer + n;
         return answer.trim();
     }
-
 }
 
