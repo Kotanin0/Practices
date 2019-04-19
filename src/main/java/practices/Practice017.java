@@ -17,8 +17,7 @@ public class Practice017 {
     public static String buzz(int n) {
         String moji = String.valueOf(n);
         if (n == 0) return "";
-        if (n % 5 == 0 || moji.contains("5")) {
-            return "buzz";
-        } else return "";
+        if (n % 5 == 0 || moji.contains("5")) return "buzz";
+        return "";
     }
 }

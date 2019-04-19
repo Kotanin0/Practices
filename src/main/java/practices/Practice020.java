@@ -36,13 +36,9 @@ public class Practice020 {
     }
 
     public static boolean isPostNumber(String s) {
-        Pattern p1 = Pattern.compile("^[0-9]{3}(-|)[0-9]{4}$");
-        Matcher m1 = p1.matcher(s);
-        return m1.matches();
-
-        //Pattern p2 = Pattern.compile("[0-9]{7}");
-        //Matcher m2 = p2.matcher(yubin);
-        //|| m2.matches();
+        Pattern p = Pattern.compile("^[0-9]{3}(-|)[0-9]{4}$");
+        Matcher m = p.matcher(s);
+        return m.matches();
     }
 
     public static boolean isPhoneNumber(String s) {
@@ -54,16 +50,9 @@ public class Practice020 {
     }
 
     public static boolean isMailAddress(String s) {
-        //s.matches("^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+@[a-z0-9]+(\\.com$|\\.co\\.jp|\\.ne\\.jp$)");
-
-        Pattern p1 = Pattern.compile("^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+@[a-z0-9]+\\.com$");
-        Pattern p2 = Pattern.compile("^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+@[a-z0-9]+\\.co\\.jp$");
-        Pattern p3 = Pattern.compile("^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+@[a-z0-9]+\\.ne\\.jp$");
-
-        Matcher m1 = p1.matcher(s);
-        Matcher m2 = p2.matcher(s);
-        Matcher m3 = p3.matcher(s);
-        return m1.matches() || m2.matches() || m3.matches();
+        Pattern p = Pattern.compile("^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+@[a-z0-9]+(\\.com$|\\.co\\.jp$|\\.ne\\.jp$)");
+        Matcher m = p.matcher(s);
+        return m.matches();
     }
 }
 

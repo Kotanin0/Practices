@@ -40,20 +40,11 @@ public class Practice021 {
 
         while ((30 > guAnswer || guAnswer >= 40) || (30 > paAnswer || paAnswer >= 40) || (30 > choAnswer || choAnswer >= 40)) {
             Random random = new Random();
-            int te1 = random.nextInt(3);
-            //System.out.println(te1);
-            if (te1 == 0) {
-                guCount++;
-                totalCount++;
-            }
-            if (te1 == 1) {
-                choCount++;
-                totalCount++;
-            }
-            if (te1 == 2) {
-                paCount++;
-                totalCount++;
-            }
+            int hand = random.nextInt(3);
+            if (hand == 0) guCount++;
+            if (hand == 1) choCount++;
+            if (hand == 2) paCount++;
+            totalCount++;
             guAnswer = guCount / totalCount * 100;
             choAnswer = choCount / totalCount * 100;
             paAnswer = paCount / totalCount * 100;
@@ -68,28 +59,3 @@ public class Practice021 {
         return " ";
     }
 }
-
-//じゃんけんするとき
-//int p2;
-//if (te1 == 0 && te2 == 0) {
-//guCount = guCount + 2;
-//totalCount = totalCount + 2;
-//if (te1 == 1 && te2 == 1) {
-//chokiCount = chokiCount + 2;
-//totalCount = totalCount + 2;
-
-//if (te1 == 2 && te2 == 2) {
-//paCount = paCount + 2;
-//totalCount = totalCount + 2;
-//int te2 = random.nextInt(3);
-//        switch (te2) {
-//            case 0:
-//                p2 = gu;
-//                break;
-//            case 1:
-//                p2 = choki;
-//                break;
-//            case 2:
-//                p2 = pa;
-//                break;
-//        }

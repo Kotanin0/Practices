@@ -15,11 +15,6 @@ public class Practice015 {
 
     // "ge" という文字列が含まれているならtrue
     public static boolean ge(String str) {
-        String answer = str;
-        if (answer.contains("ge")) {
-            return true;
-        }
-        return false;
+        return str.contains("ge");
     }
-
 }
