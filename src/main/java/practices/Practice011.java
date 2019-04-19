@@ -1,6 +1,6 @@
 package practices;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * 配列の中身を奇数と偶数に分類する関数 getOdd, getEven を作成しなさい
@@ -24,49 +24,35 @@ public class Practice011 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
         int[] a = {1, 2, 3, 4, 5};
-        getOdd(a);
+
+        //拡張for文
+        int[] answer = getOdd(a);
+        for (int x : answer) {
+            System.out.println(x);
+        }
     }
+        //forの中にgetOddを入れると毎回抜き出しレ来るから遅い
+        //for (int x : getOdd(a)) {
+        //    System.out.println(x);
+        //}
+
+        //if文なら
+        //int[] answer = getOdd(a);
+        //for (int i = 0; i < answer.length; i++) {
+        //    System.out.println(answer[i]);
+        //}
 
     // 奇数のみを返す
     public static int[] getOdd(int[] n) {
-
-        ArrayList<Integer> getOdd = new ArrayList<Integer>();
-        for (int i = 0; i < n.length; i++) {
-            if (n[i] % 2 != 0) {
-                getOdd.add(n[i]);
-            }
-        }
-        //ほしいもの→int配列の奇数
-        //いま、ArrayList<Integer>の奇数はある
-        //1.入れる箱をつくる
-        int[] answer = new int[getOdd.size()];
-        //2.forをまわす（ArrayListのこうもくがなくなるまで続ける）
-        for (int i = 0; i < getOdd.size(); i++) {
-            answer[i] = getOdd.get(i);
-        }
-        //ArrayListの0番目を、int配列の0番目にいれる
-        //ArrayListの・・・・
-        //returnでint配列を返す
-        return answer;
+        return Arrays.stream(n)
+                .filter(i -> i % 2 != 0)
+                .toArray();
     }
 
     // 偶数のみを返す
     public static int[] getEven(int[] n) {
-        ArrayList<Integer> getEven = new ArrayList<Integer>();
-        for (int i = 0; i < n.length; i++) {
-            if (n[i] % 2 == 0) {
-                getEven.add(n[i]);
-            }
-        }
-        //1.入れる箱をつくる(
-        //sizeはリストの要素を知るときに使う命令,
-        //（配列-length)、りすS（List-size）
-        int[] answergusu = new int[getEven.size()];
-        //2.forをまわす（ArrayListのこうもくがなくなるまで続ける）
-        for (int i = 0; i < getEven.size(); i++) {
-            answergusu[i] = getEven.get(i);
-        }
-        return answergusu;
+        return Arrays.stream(n)
+                .filter(i -> i % 2 == 0)
+                .toArray();
     }
-
 }
