@@ -53,8 +53,10 @@ public class Practice030 {
 
     protected enum Coin {
         fiveHundred(500, "500円"),
+        twoHundredFifty(250,"250円"),
         oneHundred(100, "100円"),
         fifty(50, "50円"),
+        twentyFive(25,"25円"),
         ten(10, "10円"),
         five(5, "5円"),
         one(1, "1円");
