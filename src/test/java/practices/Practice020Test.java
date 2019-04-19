@@ -30,7 +30,7 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class Practice020Test {
-    //Test isPostNumbe
+    //Test isPostNumber
     @Test//正しい郵便番号 = 7桁の連続した数値の文字列, 3桁-4桁の数値とハイフンで構成された文字列
     public void isPostNumberは正しい郵便番号だとtrueをかえす() {
         assertThat(Practice020.isPostNumber("1234567"),is(true));
