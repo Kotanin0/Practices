@@ -22,7 +22,6 @@ public class Practice019 {
         // ここはご自由にお使いください
         int yen = 398;
         coincheck(yen);
-
     }
 
     public static String coincheck(int n) {
