@@ -76,8 +76,6 @@ public class Practice024 {
         kenList.add("愛知県");
         kenList.add("三重県");
         kenList.add("滋賀県");
-        kenList.add("京都府");
-        kenList.add("大阪府");
         kenList.add("兵庫県");
         kenList.add("奈良県");
         kenList.add("和歌山県");

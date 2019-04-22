@@ -72,8 +72,6 @@ public class Practice025 {
         areaList.add("愛知県");
         areaList.add("三重県");
         areaList.add("滋賀県");
-        areaList.add("京都府");
-        areaList.add("大阪府");
         areaList.add("兵庫県");
         areaList.add("奈良県");
         areaList.add("和歌山県");
