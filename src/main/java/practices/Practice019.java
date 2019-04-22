@@ -19,7 +19,7 @@ package practices;
 public class Practice019 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-//        coincheck(890);
+        coincheck(1890);
     }
 
     public static String coincheck(int n) {

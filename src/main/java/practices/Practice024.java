@@ -19,7 +19,7 @@ public class Practice024 {
         // ここはご自由にお使いください
 
         // 都・道・府・県 のいずれかを指定する
-        String searchKukaku = "省";
+        String searchKukaku = "県";
 
         // エラー判定をtodoufukenListの1つ目（index番号：0）に入れてるので+1する
         System.out.println(todoufukenList().get(keyKukaku(searchKukaku)+1));
