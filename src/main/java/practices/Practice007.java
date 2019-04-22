@@ -16,21 +16,21 @@ public class Practice007 {
 
     // 素数判定
     public static boolean isPrime(int n) {
-        if (n <= 0) {
-            throw new IllegalArgumentException();
-        }
-        if (n == 1) {
-            return false;
-        }
-        for (int i = 2; i < n; i++) {
-            if (n % i <= 0) {
+                    if (n <= 0) {
+                throw new IllegalArgumentException();
+            }
+            if (n == 1) {
                 return false;
             }
+            for (int i = 2; i < n; i++) {
+                if (n % i <= 0) {
+                    return false;
+                }
+            }
+            return true;
         }
-        return true;
-    }
-}
 
+    }
 
 
 
