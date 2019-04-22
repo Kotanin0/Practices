@@ -32,17 +32,18 @@ public class Practice021 {
         int paperCount = 0;
         String br = System.getProperty("line.separator");
         double total =1;
-        /*なぜか下記が活きなかったのでの後ほど検証.percent～だけが生きていない
-        double percentRock =  100 * (rockCount/total);
-        double percentScissors = 100 * (scissorsCount/total);
-        double percentPaper = 100 * (paperCount/total);
-         */
+
+        //最初はwhile文の中に入れず、下記だけにセットしていたため、それぞれの平均変数には値が反映されず悩んでいた
+        double rockAve = 0;
+        double scissorsAve = 0;
+        double paperAve = 0;
+        double totalAverage = 0;
         Random r = new Random();
 
-            //それぞれが30%で均等になるまで試行継続
-            while(total <= 999) {
+            //それぞれが30%台で均等になるまで試行継続=30%台でない場合は処理継続
+            while (( 0.3 > rockAve || rockAve >= 0.4 ) || ( 0.3 > scissorsAve || scissorsAve >= 0.4 ) || ( 0.3 > paperAve || paperAve >= 0.4 )){
 
-                int ran = r.nextInt(3);
+        int ran = r.nextInt(3);
                 switch (ran) {
                     case 0:
                         rockCount++;
@@ -56,8 +57,13 @@ public class Practice021 {
                     default:
                         break;
                 } total++;
+                rockAve = rockCount / total;
+                scissorsAve = scissorsCount/total;
+                paperAve = paperCount/total;
+                totalAverage = ( rockAve + scissorsAve + paperAve) / 3;
 
-        }   return "グー：" + rockCount + "回" + "("+ Math.round(100 * (rockCount/total)) +"%)" + br + "チョキ：" + scissorsCount + "回" + "("+ Math.round(100 * (scissorsCount/total)) +"%)" + br + "パー：" + paperCount + "回" + "("+ Math.round(100 * (paperCount/total)) +"%)" + br + "合計" + Math.round(total) + "回"+ "("+ Math.round(100 * ((rockCount+scissorsCount+paperCount)/total)) +"%)";
+        }return "グー：" + rockCount + "回" + "("+ Math.round(100 * rockAve) +"%)" + br + "チョキ：" + scissorsCount + "回" + "("+ Math.round(100 * scissorsAve) +"%)" + br + "パー：" + paperCount + "回" + "("+ Math.round(100 * paperAve) +"%)" + br + "合計" + Math.round(total) + "回"+ "("+ Math.round(100 * totalAverage) +"%)" ;
+
     }
 
 }
