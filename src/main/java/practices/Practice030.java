@@ -1,5 +1,7 @@
 package practices;
 
+import java.util.Random;
+
 /**
  * Practice019 で作成した coincheck を拡張しなさい
  * <p>
@@ -16,42 +18,65 @@ package practices;
 
 public class Practice030 {
     public static void main(String[] args) {
+
+        Random random = new Random();
         // ここはご自由にお使いください
+
+        for (int i = 0; i < 10; i++) {
+            int n = random.nextInt(5000);
+            System.out.println(n);
+            int y = random.nextInt(2);
+            String x =( y == 1 ? "500円切れ" : "500円有り");
+            System.out.println(x);
+            System.out.println(coincheck(n, x));
+        }
 
     }
 
-    public static String coincheck(int n) {
+    public static String coincheck(int n, String y) {
 
-
-        int[] m = {500, 100, 50, 10, 5, 1};
-        int[] p = new int[6];
-        String t = "";
-        String k = "";
+        //コインの種類
+        int[] coin = {500, 250, 100, 50, 25, 10, 5, 1};
+        int[] coinNumber = new int[8];
+        String oneCoinPrinter = "";
+        String totalCoinPrinter = "";
+        //改行コード
         String br = System.getProperty("line.separator");
 
         if (n <= 0) {
-
-            k = "";
-
+            totalCoinPrinter = "";
+            //500円が切れているかどうか
+            //500円切れの場合
         } else {
-
-            for (int i = 0; i < m.length; i++) {
-                p[i] = n / m[i];
-                n = n % m[i];
+            if (y == "500円切れ") {
+                for (int i = 1; i < coin.length; i++) {
+                    coinNumber[i] = n / coin[i];
+                    n = n % coin[i];
+                    //枚数が0枚だったら、出力しない。
+                    if (coinNumber[i] == 0) {
+                        continue;
+                    } else {
+                        oneCoinPrinter = coin[i] + "円" + "＝" + coinNumber[i] + "枚";
+                        totalCoinPrinter = totalCoinPrinter + oneCoinPrinter + br;
+                    }
+                }
+          //500円がある場合
+            } else {
+                for (int i = 0; i < coin.length; i++) {
+                    coinNumber[i] = n / coin[i];
+                    n = n % coin[i];
+                    //枚数が0枚だったら、出力しない。
+                    if (coinNumber[i] == 0) {
+                        continue;
+                    } else {
+                        oneCoinPrinter = coin[i] + "円" + "＝" + coinNumber[i] + "枚";
+                        totalCoinPrinter = totalCoinPrinter + oneCoinPrinter + br;
+                    }
+                }
             }
-
-            for (int i = 0; i < m.length; i++) {
-                t = m[i] + "円" + "＝" + p[i] + "枚";
-                k = k + t + br;
-
-            }
-
         }
-
-        return k.trim();
-
-
+        return totalCoinPrinter.trim();
     }
-
-
 }
+
+
