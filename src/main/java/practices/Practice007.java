@@ -18,7 +18,7 @@ public class Practice007 {
     // 素数判定
     public static boolean isPrime(int n) {
 
-        if((n == 0 )||(n == -1)) {
+        if(n <= 0 ) {
             throw new IllegalArgumentException("引数の値が不正です");
         }
 

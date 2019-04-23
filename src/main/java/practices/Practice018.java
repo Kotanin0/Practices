@@ -26,3 +26,5 @@ public class Practice018 {
         return "";
     }
 }
+        //前述の問題をなるべく利用したいので、その場合は下記だけで済む。
+        //return Practice016.fizz(n) + Practice017.buzz(n);

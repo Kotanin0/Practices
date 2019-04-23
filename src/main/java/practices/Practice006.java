@@ -38,3 +38,4 @@ public class Practice006 {
         }  return g;
     }
 }
+
