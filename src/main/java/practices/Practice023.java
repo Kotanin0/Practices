@@ -10,7 +10,7 @@ import static java.lang.Math.sqrt;
 public class Practice023 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        //ランダムな数字をisPrimeの引数に渡して実行することを、10万回実行する。
+        //ランダムな数字をisPrimeの引数に渡して実行することを、100000回実行する。
         int i = 100000; //  i = 回数　-> 10万回
         int[] randomNumber = new int[i]; //配列の宣言　randomNumberっていうm個の配列を宣言
         Random rand = new Random();      //randomNumber　にランダムな数字を入れたい
