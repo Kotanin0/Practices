@@ -11,6 +11,11 @@ import java.util.List;
 
 public class Practice027 {
     public static void main(String[] args) {
+        System.out.println(getlist());
+
+    }
+
+    public static List getlist() {
         // ここはご自由にお使いください
         Fruits item1 = new Fruits("リンゴ", "apple", "赤", 120, 400);
         Fruits item2 = new Fruits("イチゴ", "strawberry", "赤", 480, 120);
@@ -44,9 +49,16 @@ public class Practice027 {
         }
         //確認用
         System.out.println(fruitsList);
+
+        return (fruitsList);
+    }
+
     }
 
 
-}
+
+
+
+
 
 
