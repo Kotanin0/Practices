@@ -16,22 +16,20 @@ public class Practice007 {
 
     // 素数判定
     public static boolean isPrime(int n) {
-                    if (n <= 0) {
-                throw new IllegalArgumentException();
-            }
-            if (n == 1) {
+        if (n <= 0) {
+            throw new IllegalArgumentException();
+        }
+        if (n == 1) {
+            return false;
+        }
+        for (int i = 2; i < n; i++) {
+            if (n % i <= 0) {
                 return false;
             }
-            for (int i = 2; i < n; i++) {
-                if (n % i <= 0) {
-                    return false;
-                }
-            }
-            return true;
         }
-
+        return true;
     }
-
+}
 
 
 //nを2～(n-1)で割り続ける。最終的にどの場合も割り切れなければ素数。
