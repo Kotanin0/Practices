@@ -12,6 +12,8 @@ package practices;
  * を求める関数をそれぞれ作成しなさい
  */
 
+//リファリタリング済み。三項演算子を利用。
+
 public class Practice001 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
@@ -36,10 +38,7 @@ public class Practice001 {
 
     // 商
     public static int sho(int x, int y) {
-        if(y == 0){
-            return 0;
-        }
-        return x / y;
+        return y == 0 ? 0 : x / y;
     }
 
     // 余り

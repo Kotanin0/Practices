@@ -24,9 +24,7 @@ public class Practice007 {
             throw new IllegalArgumentException("不正な引数です");
         }
 
-        if (n == 1) {
-            return false;
-        }
+        if (n == 1) return false;
 
         for (int i = 2; i < n; i++) {
             if (n % i == 0) {

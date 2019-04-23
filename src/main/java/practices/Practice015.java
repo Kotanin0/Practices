@@ -18,3 +18,5 @@ public class Practice015 {
         return str.contains("ge") ;
     }
 }
+
+/* metchsはboolean型で返せない、indexOf("ge") > 0 ;*/

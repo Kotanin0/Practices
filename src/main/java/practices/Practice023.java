@@ -2,6 +2,8 @@ package practices;
 
 import java.security.PublicKey;
 
+import static java.lang.StrictMath.sqrt;
+
 /**
  * おそらく素数判定関数の100000回の実行速度がとても遅いはずなので、速くしなさい
  */
@@ -26,14 +28,15 @@ public class Practice023 {
     public static int isPrime(int n) {
         int count = 0;
         //ガード節を用いて、先に出てきそうな偶数のみカウント。
-        if (n == 0){
+        if (n == 0) {
             return 0;
         }
-        if ( n > 2 && n % 2 ==0) {
+        if (n > 2 && n % 2 == 0) {
             return count++;
         }
 
-        for (int i = 3; i <= (int) Math.sqrt(n); i += 2) {
+        int x = (int) sqrt(n);
+        for (int i = 3; i <= x; i += 2) {
             count++;  //処理をやるたびに1+される。除算をやりきるイメージ。
             if (n % i == 0) {
                 return count;

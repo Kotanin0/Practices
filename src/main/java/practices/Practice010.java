@@ -19,7 +19,14 @@ public class Practice010 {
 
     // 2進数の文字列を返す
     public static String getBinary(int n) {
-        if(n < 0){
+        String getBinaryStr = "";
+        getBinaryStr = Integer.toBinaryString(n);
+        return getBinaryStr;
+    }
+}
+
+
+     /*   if(n < 0){
             throw new IllegalArgumentException("引数の値が不正です");
         }
         if(n == 0){
@@ -33,4 +40,13 @@ public class Practice010 {
         }
         return returnBinary;
     }
-}
+} */
+
+/*
+javaの標準の
+Integer.toBinaryString(n);
+
+
+
+
+ */

@@ -13,19 +13,14 @@ package practices;
 public class Practice018 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        System.out.println(fizzbuzz(15));
     }
 
     public static String fizzbuzz(int n) {
         //ガード節使用。
         String fizz = Practice016.fizz(n);
         String buzz = Practice017.buzz(n);
-
-        if (fizz == "fizz" && buzz == "buzz") return "fizzbuzz";
-        if (fizz == "fizz") return "fizz";
-        if (buzz == "buzz") return "buzz";
-        return "";
-
+        return fizz + buzz;
     }
 }
 

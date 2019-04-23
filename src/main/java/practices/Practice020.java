@@ -43,7 +43,7 @@ public class Practice020 {
 
     //例：09012345678=true, 090-1234-5678=true, 03-1234-5678=true, ...
     public static boolean isPhoneNumber(String s) {
-        return s.matches("^[0-9]{3}-?[0-9]{4}-?[0-9]{4}| [0-9]{2}-[0-9]{4}-[0-9]{4}");
+        return s.matches("^[0-9]{3}-?[0-9]{4}-?[0-9]{4}|[0-9]{2}-[0-9]{4}-[0-9]{4}");
     }
 
     //* 判定条件：@を必ず含む, 末尾が ".com", ".co.jp", ".ne.jp" で終わる

@@ -19,18 +19,18 @@ public class Practice029 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
         List<Fruits> fruits = Practice027.setFruits();
-        List<Fruits> ByUplist = returnByUplist(fruits);
-        for (Fruits f : ByUplist) {
+        List<Fruits> byUplist = returnByUplist(fruits);
+        for (Fruits f : byUplist) {
             f.printInfomation();
         }
     }
 
     public static List<Fruits> returnByUplist(List<Fruits> fruits) {
-        List<Fruits> ByUplist = fruits.stream()
+        List<Fruits> byUplist = fruits.stream()
                 .sorted((fruit1, fruit2) -> fruit2.getFruitsPrice() - fruit1.getFruitsPrice()) /* 中間操作 */
                 .collect(Collectors.toList()); /* 終端操作 */
-        ByUplist.get(0).byUpFruitsInfomation();
-        return ByUplist;
+        byUplist.get(0).byUpFruitsInfomation();
+        return byUplist;
 
     }
 

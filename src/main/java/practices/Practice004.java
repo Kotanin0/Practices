@@ -11,6 +11,8 @@ package practices;
  * 　59点以下：不合格
  */
 
+//リファリタリング済み。
+
 public class Practice004 {
     public static void main(String[] args) {
         // ここはご自由にお使いください

@@ -1,6 +1,6 @@
 package practices;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * 配列の中身を奇数と偶数に分類する関数 getOdd, getEven を作成しなさい
@@ -22,7 +22,30 @@ import java.util.ArrayList;
 
 public class Practice011 {
     public static void main(String[] args) {
-        // ここはご自由にお使いくだい
+        // ここはご自由にお使いください
+        }
+
+
+    public static int[] getOdd(int[] array) {
+        return Arrays.stream(array)
+                .filter(NumberExtension::isOdd)
+                .toArray();
+    }
+
+    public static int[] getEven(int[] array) {
+        return Arrays.stream(array)
+                .filter(NumberExtension::isEven)
+                .toArray();
+
+    }
+}
+
+
+
+
+/*
+
+
         int[] numberArrayList = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         int data[];
 
@@ -32,10 +55,10 @@ public class Practice011 {
         }
     }
 
+
     //()内を要求している。　　今回はint型の配列を返すといっている。
     public static int[] getArrayList(ArrayList<Integer> X) {
         int[] returnList = new int[X.size()];
-
         for (int i = 0; i < X.size(); i++) {
             returnList[i] = X.get(i); // Integer
         }
@@ -76,4 +99,4 @@ public class Practice011 {
         return getArrayList(arrayEven);
     }
 
-}
+*/

@@ -41,7 +41,7 @@ public class Practice025 {
         ArrayList<String> returnPrefecture = new ArrayList<String>();//最後に返す、ArrayListを定義する。
         arrayPrefecture.stream() //streamの取得
                 .filter(i -> i.endsWith(checkPrefecture))  /* 中間操作 */
-                .forEach(returnPrefecture::add); /* 終端操作 */
+                .forEach(returnPrefecture::add); /* 終端操作  forEachは引数 -> 繰り返し行う処理(引数)*/
 
 
         return returnPrefecture;

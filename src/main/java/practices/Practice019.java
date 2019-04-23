@@ -52,6 +52,14 @@ public class Practice019 {
 
 }
 
+/*
+
+HashMap<integer, integer> hashmap = new HashMap<integer, integer>();//[1]
+        hashmap.put(500 , 0);//[2]
+        hashmap.put("orange", "みかん");//[3]
+        hashmap.put("peach", "もも");//[4]
+        何行で
+ */
 
 
 

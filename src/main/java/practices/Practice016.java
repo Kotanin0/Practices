@@ -28,3 +28,5 @@ public class Practice016 {
     }
 
 }
+
+/*if(n % 5 == 0) || String.valueOf(n).contains("")*/

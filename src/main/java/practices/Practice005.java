@@ -13,6 +13,8 @@ package practices;
  * 　59点以下：不可
  */
 
+//リファリタリング済み。
+
 public class Practice005 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
