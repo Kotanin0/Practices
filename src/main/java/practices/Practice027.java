@@ -13,8 +13,12 @@ import java.util.List;
 public class Practice027 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
+        List<Fruits> NewFruitsList = fruitsList();
+    }
 
-        ArrayList<Fruits> fruitsList = new ArrayList<>();
+    public static List<Fruits> fruitsList() {
+
+        List<Fruits> fruitsList = new ArrayList<>();
 
         fruitsList.add(new Fruits("りんご", "apple", "red", 100, 10));
         fruitsList.add(new Fruits("みかん", "orange", "orange", 50, 20));
@@ -24,12 +28,8 @@ public class Practice027 {
         fruitsList.add(new Fruits("いちご", "strawberry", "red", 300, 2));
         fruitsList.add(new Fruits("スイカ", "watermelon", "green", 400, 6));
         fruitsList.add(new Fruits("なし", "pear", "Yellowish", 120, 15));
-        fruitsList.add(new Fruits("もも", "peach", "pink", 180, 30));
-        fruitsList.add(new Fruits("レモン", "strawberry", "yellow", 700, 70));
-
-        for (int i = 0; i < fruitsList.size(); i++) {
-            System.out.println("果物名:" + fruitsList.get(i).getName() + "、" + "果物名(英語):" + fruitsList.get(i).getEnglishName() + "、" + "色:" + fruitsList.get(i).getColor() + "、" + "金額:" + fruitsList.get(i).getPrice()
-                    + "、" + "在庫:" + fruitsList.get(i).getStock());
-        }
+        fruitsList.add(new Fruits("もも", "peach", "pink", 700, 30));
+        fruitsList.add(new Fruits("レモン", "strawberry", "yellow", 700, 0));
+        return fruitsList;
     }
 }
