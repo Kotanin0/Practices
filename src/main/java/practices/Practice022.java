@@ -13,7 +13,7 @@ public class Practice022 {
         long startTime = System.currentTimeMillis();  // 処理前の時刻を取得
 
         //ランダムな数字をisPrimeの引数に渡して実行することを、10万回実行する。
-        int i = 100000; //  i = 回数　-> 10万回
+        int i = 100000; //  i = 回数　-> 100000回
 
         int m = i;                       //m個のランダムな数字を作る
         int[] randomNumber = new int[m]; //配列の宣言　randomNumberっていうm個の配列を宣言
