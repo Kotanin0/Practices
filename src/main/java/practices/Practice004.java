@@ -11,16 +11,17 @@ package practices;
  * 　59点以下：不合格
  */
 
+//リファリタリング済み。
+
 public class Practice004 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+System.out.println(showResult(78));
     }
 
     // 試験の結果を返却する
     public static String showResult(int n) {
+        return  n >= 60 ? "合格" : "不合格";
+        }
 
-        return hogehoge;
     }
-
-}

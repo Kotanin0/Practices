@@ -14,13 +14,39 @@ package practices;
 public class Practice010 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        System.out.println(getBinary(18));
     }
 
     // 2進数の文字列を返す
     public static String getBinary(int n) {
-
-        return "";
+        String getBinaryStr = "";
+        getBinaryStr = Integer.toBinaryString(n);
+        return getBinaryStr;
     }
-
 }
+
+
+     /*   if(n < 0){
+            throw new IllegalArgumentException("引数の値が不正です");
+        }
+        if(n == 0){
+            return "0";
+        }
+
+        String returnBinary = "";
+        while (n > 0){
+            returnBinary = (n % 2) + returnBinary;
+            n = n / 2;
+        }
+        return returnBinary;
+    }
+} */
+
+/*
+javaの標準の
+Integer.toBinaryString(n);
+
+
+
+
+ */

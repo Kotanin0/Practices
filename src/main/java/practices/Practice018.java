@@ -5,21 +5,23 @@ package practices;
  * 5の倍数と、5の付く数字のときに "buzz" と返却
  * どちらにもあてはまるときに "fizzbuzz" と返却
  * する関数 fizzbuzz を作成しなさい
- *
+ * <p>
  * 引数：整数
  * 返却："fizz" / "buzz" / "fizzbuzz" / "" (あてはまらない場合は空文字)
- *
  */
 
 public class Practice018 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        System.out.println(fizzbuzz(15));
     }
 
     public static String fizzbuzz(int n) {
-
-        return "";
+        //ガード節使用。
+        String fizz = Practice016.fizz(n);
+        String buzz = Practice017.buzz(n);
+        return fizz + buzz;
     }
-
 }
+
+
