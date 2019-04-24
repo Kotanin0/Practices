@@ -17,10 +17,12 @@ package practices;
 public class Practice030 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        System.out.println(coincheck(1238, "false"));
+        //500円があったら1,なかったら0
+        int fiveHundredStockFlag = 0;
+        System.out.println(coincheck(1238, fiveHundredStockFlag));
     }
 
-    public static String coincheck(int n, String check) {
+    public static String coincheck(int n, int check) {
         String br = System.getProperty("line.separator");
         //0以下の数値を空で返す
         if (0 >= n) return "";
@@ -29,7 +31,7 @@ public class Practice030 {
         int count = 0;
         int[] coins = {500, 250, 100, 50, 25, 10, 5, 1};
 
-        if (check == "true") {
+        if (check == 0) {
             for (int i = 0; i < coins.length; i++) {
                 if (n > coins[i]) {
                     count = n / coins[i];
