@@ -24,7 +24,7 @@ public class Practice027 {
         Fruits item5 = new Fruits("スターフルーツ", "star fruits", "黄緑", 850, 100);
         Fruits item6 = new Fruits("ドラゴンフルーツ", "dragon fruits", "ピンク", 700, 50);
         Fruits item7 = new Fruits("ポポー", "pawpaw", "黄緑", 300, 2);
-        Fruits item8 = new Fruits("マンゴスチン", "mangosteen", "紫", 1100, 30);
+        Fruits item8 = new Fruits("マンゴスチン", "mangosteen", "紫", 1100, 0);
         Fruits item9 = new Fruits("ミラクルフルーツ", "miraclefruit", "赤", 2000, 30);
         Fruits item10 = new Fruits("バナナ", "banana", "黄", 30, 1200);
 
@@ -44,11 +44,11 @@ public class Practice027 {
         fruitsList.add(item10);
 
         //確認用
-        for (int i = 0; i < fruitsList.size(); i++) {
-            System.out.println(fruitsList.get(i).getjpName());
-        }
+       // for (int i = 0; i < fruitsList.size(); i++) {
+        //    System.out.println(fruitsList.get(i).getjpName());
+       // }
         //確認用
-        System.out.println(fruitsList);
+        //System.out.println(fruitsList);
 
         return (fruitsList);
     }
