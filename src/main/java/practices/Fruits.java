@@ -31,7 +31,7 @@ class Fruits {
         this.unitPrice = unitPrice;
         this.stock = stock;
 
-        System.out.println(jpName + "入荷しました");
+        //System.out.println(jpName + "入荷しました");
 
     }
 
