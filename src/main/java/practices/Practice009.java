@@ -31,15 +31,11 @@ public class Practice009 {
             } else {
                 // kがnを超えるまで
                 while (k <= n) {
-                    // kを出力
-                    fibonacci += " " + k;
+                    fibonacci += " " + k; // kを出力
                     // ここから次の文字判定
-                    // iにjを代入（iが2つ前）
-                    i = j;
-                    // kにjを代入（jが1つ前）
-                    j = k;
-                    // kにi+jを代入（kがいま）
-                    k = i + j;
+                    i = j; // iにjを代入（iが2つ前）
+                    j = k; // kにjを代入（jが1つ前）
+                    k = i + j; // kにi+jを代入（kがいま）
                 }
                 return fibonacci;
             }
