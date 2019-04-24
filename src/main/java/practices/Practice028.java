@@ -25,15 +25,16 @@ public class Practice028 {
         System.out.println(fruitsColor("red"));
         System.out.println(manyStockFruits());
         System.out.println(inStockFruits());
+
     }
 
     //一番単価の高い果物を返す関数
     public static String maxPriceFruits() {
-        List<Fruits> newFruitsList = Practice027.fruitsList();
-        return newFruitsList.stream()
-                .max(Comparator.comparing(s -> s.getPrice()))
-                .map(s -> s.getName())
-                .get();
+            List<Fruits> newFruitsList = Practice027.fruitsList();
+            return newFruitsList.stream()
+                    .max(Comparator.comparing(s -> s.getPrice()))
+                    .map(s -> s.getName())
+                    .get();
     }
 
     //任意の色の果物を返す関数
@@ -53,6 +54,7 @@ public class Practice028 {
                 .map(s -> s.getName())
                 .collect(Collectors.toList());
     }
+
 
     //在庫がある果物のみを返す関数
     public static List<String> inStockFruits() {
