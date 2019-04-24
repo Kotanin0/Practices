@@ -37,7 +37,7 @@ public class Practice030 {
         int someCoins;
 
         for (Coin coin : Coin.values()) {
-            if (coin.equals(emptyCoin.getCoinNameInt())) continue;
+            if (coin.equals(emptyCoin)) continue;
             someCoins = n / coin.getCoinNameInt();//枚数
             if (someCoins == 0) continue;
             n = n % coin.getCoinNameInt();//あまり
@@ -77,8 +77,8 @@ public class Practice030 {
             return this.coinNameStr;
         }
 
-        public boolean equals(int value) {
-            if (this.coinNameInt == value) {
+        public boolean equals(Coin value) {
+            if (this.coinNameInt == value.getCoinNameInt()) {
                 return true;
             }
             return false;
