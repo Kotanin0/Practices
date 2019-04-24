@@ -21,8 +21,8 @@ import java.util.Map;
 
 public class Practice030 {
     public static void main(String[] args) {
-        System.out.println(("--250円--"));
-        System.out.println(coincheck(250, Coin.fiveHundred));
+        System.out.println(("--500円--"));
+        System.out.println(coincheck(500, Coin.fiveHundred));
         System.out.println(("--25円--"));
         System.out.println(coincheck(25, Coin.fiveHundred));
         System.out.println(("--27円--"));
@@ -37,7 +37,7 @@ public class Practice030 {
         int someCoins;
 
         for (Coin coin : Coin.values()) {
-            if (coin == emptyCoin) continue;
+            if (coin.equals(emptyCoin.getCoinNameInt())) continue;
             someCoins = n / coin.getCoinNameInt();//枚数
             if (someCoins == 0) continue;
             n = n % coin.getCoinNameInt();//あまり
@@ -53,10 +53,10 @@ public class Practice030 {
 
     protected enum Coin {
         fiveHundred(500, "500円"),
-        twoHundredFifty(250,"250円"),
+        twoHundredFifty(250, "250円"),
         oneHundred(100, "100円"),
         fifty(50, "50円"),
-        twentyFive(25,"25円"),
+        twentyFive(25, "25円"),
         ten(10, "10円"),
         five(5, "5円"),
         one(1, "1円");
@@ -75,6 +75,13 @@ public class Practice030 {
 
         public String getCoinNameStr() {
             return this.coinNameStr;
+        }
+
+        public boolean equals(int value) {
+            if (this.coinNameInt == value) {
+                return true;
+            }
+            return false;
         }
     }
 }
