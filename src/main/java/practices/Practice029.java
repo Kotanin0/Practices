@@ -1,5 +1,6 @@
 package practices;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -30,6 +31,11 @@ public class Practice029 {
         List<Fruits> x = fruits.stream()
                 .sorted((fruit1, fruit2) -> fruit2.getPrice() - fruit1.getPrice())
                 .collect(Collectors.toList());
+
+        if (x.size() == 0) {
+            List<Fruits> returnIfListisNull = new ArrayList<>();
+            return returnIfListisNull;
+        }
 
         x.get(0).buyUpAlltheFruit();
         return x;
