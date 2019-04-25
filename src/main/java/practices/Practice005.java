@@ -3,9 +3,9 @@ package practices;
 /**
  * 試験の点数を入力し、対応する結果を表示する関数 showResult を作成しなさい
  * 試験の仕様は以下とする
- *
+ * <p>
  * 引数：整数
- *
+ * <p>
  * 返却：以下の文字列のいずれか
  * 　80点以上：優
  * 　70-79点：良
@@ -21,8 +21,9 @@ public class Practice005 {
 
     // 試験の結果を返却する
     public static String showResult(int n) {
-
-        return "";
+        if (n >= 80) return "優";
+        if (n >= 70) return "良";
+        if (n >= 60) return "可";
+        return "不可";
     }
-
 }
