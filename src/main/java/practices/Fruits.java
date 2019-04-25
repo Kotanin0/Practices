@@ -19,12 +19,12 @@ class Fruits {
     private String jpName;
     private String name;
     private String color;
-    private double unitPrice;
+    private int unitPrice;
     private int stock;
 
 
     //コンストラクタ
-    Fruits(String jpName, String name, String color, double unitPrice, int stock) {
+    Fruits(String jpName, String name, String color, int unitPrice, int stock) {
         this.jpName = jpName;
         this.name = name;
         this.color = color;
@@ -45,7 +45,7 @@ class Fruits {
     public String getColor() {
         return this.color;
     }
-    public double getUnitPrice() {
+    public int getUnitPrice() {
         return this.unitPrice;
     }
     public int getStock(){
