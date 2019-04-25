@@ -20,4 +20,8 @@ public class JankenTest1 extends JankenMan{
         //適当に手を出す
         return rand.nextInt(3);
     }
+
+    public void result(String win){
+        //勝った負けたでなんかやりたいとき。
+    }
 }

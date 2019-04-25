@@ -95,18 +95,25 @@ public class Practice201 {
 
             //得点をつける
             judgeWinner = judge(playHandPlayer1, playHandPlayer2);
+
             switch (judgeWinner) {
                 case 0://あいこ
                     sumPointPlayer1 += declareHandPlayer1 == playHandPlayer1 ? 1 : -1;
                     sumPointPlayer2 += declareHandPlayer2 == playHandPlayer2 ? 1 : -1;
+                    player1.result("あいこ");
+                    player2.result("あいこ");
                     break;
                 case 1://player1の勝ち
                     sumPointPlayer1 += declareHandPlayer1 == playHandPlayer1 ? 5 : 3;
                     sumPointPlayer2 += declareHandPlayer2 == playHandPlayer2 ? -3 : -5;
+                    player1.result("勝ち");
+                    player2.result("負け");
                     break;
                 case 2://player2の勝ち
                     sumPointPlayer1 += declareHandPlayer1 == playHandPlayer1 ? -3 : -5;
                     sumPointPlayer2 += declareHandPlayer2 == playHandPlayer2 ? 5 : 3;
+                    player1.result("負け");
+                    player2.result("勝ち");
                     break;
             }
         }
