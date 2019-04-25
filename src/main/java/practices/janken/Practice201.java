@@ -21,7 +21,7 @@ import java.util.Arrays;
  * 　ex.「グーを出す」と宣言して、裏切って「パー」を出して負けた
  * ・宣言しなかった手であいこ -> -1点
  * 　ex.「グーを出す」と宣言して、裏切って「パー」を出してあいこ
- *・3回連続宣言通りに手を出さなかったら、-100点
+ * ・3回連続宣言通りに手を出さなかったら、-100点
  * <p>
  * 引数と返り値：
  * グー   -> int 0
@@ -33,100 +33,114 @@ import java.util.Arrays;
  */
 
 public class Practice201 {
+    //宣言を裏切った情報( [ プレイヤー ][ 回数 ] ) 過去三回分の結果だけを常に保存していく
+    private static int[][] arrayPlayersLiar = new int[2][3];
+
     public static void main(String[] args) {
-        // ここはご自由にお使いください
         //インスタンス
         JankenTest1 player1 = new JankenTest1();
         JankenTest2 player2 = new JankenTest2();
 
         //宣言の手
-        int declareHandPlayer1;
-        int declareHandPlayer2;
+        int[] declareHands;
         //勝負の手
-        int playHandPlayer1;
-        int playHandPlayer2;
+        int[] playHands;
         //得点
-        int sumPointPlayer1 = 0;
-        int sumPointPlayer2 = 0;
-        //勝敗
-        int judgeWinner;
-        //宣言を裏切った情報を保存
-        int loop = 0;
-        int[] loopPlayer1 = new int[3];
-        int[] loopPlayer2 = new int[3];
+        int[] sumPointPlayers = new int[2];
+        int[] temp;
 
         for (int i = 0; i < 100; i++) {
             //宣言する
-            declareHandPlayer1 = player1.declare();
-            declareHandPlayer2 = player2.declare();
-            if (isHandBetweenZeroToToo(declareHandPlayer1)) {
-                System.out.println(player1.getName() + "の宣言の手が不正です");
-                break;
-            }
-            if (isHandBetweenZeroToToo(declareHandPlayer2)) {
-                System.out.println(player2.getName() + "の宣言の手が不正です");
-                break;
-            }
+            declareHands = declare(player1, player2);
 
             //勝負する
-            playHandPlayer1 = player1.fight(declareHandPlayer2);
-            playHandPlayer2 = player2.fight(declareHandPlayer1);
-            if (isHandBetweenZeroToToo(playHandPlayer1)) {
-                System.out.println(player1.getName() + "の勝負の手が不正です");
-                break;
-            }
-            if (isHandBetweenZeroToToo(playHandPlayer2)) {
-                System.out.println(player2.getName() + "の勝負の手が不正です");
-                break;
+            playHands = fight(player1, player2, declareHands);
+
+            //裏切り判定
+            temp = liar(declareHands, playHands, i);
+            for (int j = 0; j < temp.length; j++) {
+                sumPointPlayers[j] += temp[j];
             }
 
-            //宣言を裏切った？
-            loopPlayer1[loop] = declareHandPlayer1 == playHandPlayer1 ? 0 : 1;
-            loopPlayer2[loop++] = declareHandPlayer2 == playHandPlayer2 ? 0 : 1;
-            if (Arrays.stream(loopPlayer1).sum() == 3) {
-                sumPointPlayer1 += -100;
-            }
-            if (Arrays.stream(loopPlayer2).sum() == 3) {
-                sumPointPlayer2 += -100;
-            }
-            if (loop > 2) {
-                loop = 0;
-            }
-
-            //得点をつける
-            judgeWinner = judge(playHandPlayer1, playHandPlayer2);
-
-            switch (judgeWinner) {
-                case 0://あいこ
-                    sumPointPlayer1 += declareHandPlayer1 == playHandPlayer1 ? 1 : -1;
-                    sumPointPlayer2 += declareHandPlayer2 == playHandPlayer2 ? 1 : -1;
-                    player1.result("あいこ");
-                    player2.result("あいこ");
-                    break;
-                case 1://player1の勝ち
-                    sumPointPlayer1 += declareHandPlayer1 == playHandPlayer1 ? 5 : 3;
-                    sumPointPlayer2 += declareHandPlayer2 == playHandPlayer2 ? -3 : -5;
-                    player1.result("勝ち");
-                    player2.result("負け");
-                    break;
-                case 2://player2の勝ち
-                    sumPointPlayer1 += declareHandPlayer1 == playHandPlayer1 ? -3 : -5;
-                    sumPointPlayer2 += declareHandPlayer2 == playHandPlayer2 ? 5 : 3;
-                    player1.result("負け");
-                    player2.result("勝ち");
-                    break;
+            //得点
+            temp = judge(declareHands, playHands);
+            for (int j = 0; j < temp.length; j++) {
+                sumPointPlayers[j] += temp[j];
             }
         }
 
-        System.out.println(player1.getName() + "の点数は" + sumPointPlayer1 + "です");
-        System.out.println(player2.getName() + "の点数は" + sumPointPlayer2 + "です");
-        if (sumPointPlayer1 > sumPointPlayer2) {
-            System.out.println(player1.getName() + "の勝ちです");
-        } else if (sumPointPlayer2 > sumPointPlayer1) {
-            System.out.println(player2.getName() + "の勝ちです");
-        } else {
-            System.out.println("勝敗がつきませんでした");
+        System.out.println(player1.getName() + "の得点は" + sumPointPlayers[0] + "点です");
+        System.out.println(player2.getName() + "の得点は" + sumPointPlayers[1] + "点です");
+
+    }
+
+    public static int[] liar(int[] declareHands, int[] playHands, int i) {
+        int[] returnInt = new int[2];
+        for (int j = 0; j < 2; j++) {
+            //宣言した手を裏切ったかどうかを、ベルトコンベアのように格納していく
+            arrayPlayersLiar[j][i % 3] = declareHands[j] == playHands[j] ? 0 : 1;
+
+            //3回連続で裏切った場合
+            if (Arrays.stream(arrayPlayersLiar[j]).sum() == 3) {
+                returnInt[j] += -100;
+            }
         }
+
+        return returnInt;
+    }
+
+    public static int[] declare(JankenMan player1, JankenMan player2) {
+        int[] returnInt = new int[2];
+
+        returnInt[0] = player1.declare();
+        returnInt[1] = player2.declare();
+
+        return returnInt;
+    }
+
+    public static int[] fight(JankenMan player1, JankenMan player2, int[] declareArray) {
+        int[] returnInt = new int[2];
+
+        returnInt[0] = player1.fight(declareArray[1]);
+        returnInt[1] = player2.fight(declareArray[0]);
+
+        return returnInt;
+    }
+
+    //得点をかえす
+    public static int[] judge(int[] declareHands, int[] playHands) {
+        int[] returnInt = new int[2];
+
+        if (declareHands.length != 2 || playHands.length != 2) {
+            return returnInt;
+        }
+        for (int i = 0; i < 2; i++) {
+            if (declareHands[i] > 2 || declareHands[i] > 2){
+                return returnInt;
+            }
+            if (declareHands[i] < 0 || declareHands[i] < 0){
+                return returnInt;
+            }
+        }
+
+        int judgeWinner = judgeWinner(playHands[0], playHands[1]);
+
+        switch (judgeWinner) {
+            case 0://あいこ
+                returnInt[0] += declareHands[0] == playHands[0] ? 1 : -1;
+                returnInt[1] += declareHands[1] == playHands[1] ? 1 : -1;
+                break;
+            case 1://player1の勝ち
+                returnInt[0] += declareHands[0] == playHands[0] ? 5 : 3;
+                returnInt[1] += declareHands[1] == playHands[1] ? -3 : -5;
+                break;
+            case 2://player2の勝ち
+                returnInt[0] += declareHands[0] == playHands[0] ? -3 : -5;
+                returnInt[1] += declareHands[1] == playHands[1] ? 5 : 3;
+                break;
+        }
+
+        return returnInt;
     }
 
     public static boolean isHandBetweenZeroToToo(int n) {
@@ -134,7 +148,7 @@ public class Practice201 {
     }
 
     //0->あいこ 1->1つめに引数側の勝ち 2->2つめの引数側の勝ち
-    public static int judge(int hand1, int hand2) {
+    public static int judgeWinner(int hand1, int hand2) {
         if (hand1 == hand2) return 0;
 
         if (hand1 == 0) {//hand1がグーなら
