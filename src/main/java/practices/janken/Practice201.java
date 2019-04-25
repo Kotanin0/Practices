@@ -29,15 +29,15 @@ import java.util.Arrays;
  * パー   -> int 2
  * とする。
  * クラスのつくりかた：
- * JankenTest1を参考に、Janken<名前>というクラスを自分で作成します。ex.JankenMiyamae
+ * JankenTest1を参考に、JankenManを継承して、Janken<名前>というクラスを自分で作成します。ex.JankenMiyamae
  */
 
 public class Practice201 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
         //インスタンス
-        JankenTest1 player1 = new JankenTest1();
-        JankenTest2 player2 = new JankenTest2();
+        JankenMiyamae player1 = new JankenMiyamae();
+        JankenTest1 player2 = new JankenTest1();
 
         //宣言の手
         int declareHandPlayer1;
@@ -121,7 +121,7 @@ public class Practice201 {
             System.out.println("勝敗がつきませんでした");
         }
     }
-    
+
     public static boolean isHandBetweenZeroToToo(int n) {
         return (n < 0 || 2 < n);
     }
