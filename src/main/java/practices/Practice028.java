@@ -29,8 +29,7 @@ public class Practice028 {
         //Fruits maxPriceFruitsList = maxPriceFruits(getFruitsList);
         //maxPriceFruitsList.printData();
         System.out.println(maxPriceFruits(getFruitsList));
-
-
+        
         //任意の色の果物
         System.out.println("=====赤色の果物=====");
         List<Fruits> fruitsColorList = fruitsColor(getFruitsList, "red");

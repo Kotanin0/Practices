@@ -23,7 +23,7 @@ public class Practice029 {
     }
 
     //一番単価が高い果物のリスト情報
-    public static List<Fruits> totalStockPriceList(List<Fruits> getMaxFruitsList) {
+    public static List<Fruits> maxPriceFruitsList(List<Fruits> getMaxFruitsList) {
         return getMaxFruitsList.stream()
                 .filter(s -> s.getName().matches(Practice028.maxPriceFruits(getMaxFruitsList)))
                 .collect(Collectors.toList());
@@ -31,9 +31,9 @@ public class Practice029 {
 
     public static String totalStockPriceMessege(List<Fruits> getMaxFruitsList) {
         //一番単価が高い果物の単価
-        int priceOfMaxPriceFruits = totalStockPriceList(getMaxFruitsList).get(0).getPrice();
+        int priceOfMaxPriceFruits = maxPriceFruitsList(getMaxFruitsList).get(0).getPrice();
         //一番単価が高い果物の在庫数
-        int stockqtyOfMaxPriceFruits = totalStockPriceList(getMaxFruitsList).get(0).getStock();
+        int stockqtyOfMaxPriceFruits = maxPriceFruitsList(getMaxFruitsList).get(0).getStock();
         //一番単価が高い果物の在庫金額
         int totalStockPriceOfMaxPriceFruits = priceOfMaxPriceFruits * stockqtyOfMaxPriceFruits;
 
