@@ -36,8 +36,8 @@ public class Practice201 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
         //インスタンス
-        JankenMiyamae player1 = new JankenMiyamae();
-        JankenTest1 player2 = new JankenTest1();
+        JankenTest1 player1 = new JankenTest1();
+        JankenTest2 player2 = new JankenTest2();
 
         //宣言の手
         int declareHandPlayer1;
