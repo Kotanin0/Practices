@@ -2,13 +2,13 @@ package practices;
 
 /**
  * int 型の変数 x、y にそれぞれ数値を入力し
- *
+ * <p>
  * - 和
  * - 差（x－y）
  * - 積
  * - 商
  * - 余り(x÷y)
- *
+ * <p>
  * を求める関数をそれぞれ作成しなさい
  */
 
@@ -20,26 +20,26 @@ public class Practice001 {
 
     // 和
     public static int wa(int x, int y) {
-        return 0;
+        return x + y;
     }
 
     // 差
     public static int sa(int x, int y) {
-        return 0;
+        return x - y;
     }
 
     // 積
     public static int seki(int x, int y) {
-        return 0;
+        return x * y;
     }
 
     // 商
     public static int sho(int x, int y) {
-        return 0;
+        return y == 0 ? 0 : x / y;
     }
 
     // 余り
     public static int amari(int x, int y) {
-        return 0;
+        return y == 0 ? 0 : x % y;
     }
 }
