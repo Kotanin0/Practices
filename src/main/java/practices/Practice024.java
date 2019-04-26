@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
 /**
  * String型のArrayListを作成し、それに47都道府県を格納してください
  * <p>
@@ -20,19 +19,19 @@ import java.util.List;
 public class Practice024 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        ArrayList<String> prefectureName47 = new ArrayList<String>(Arrays.asList("北海道", "青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県", "茨城県", "栃木県", "群馬県",
+        ArrayList<String> prefecturesList = new ArrayList<String>(Arrays.asList("北海道", "青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県", "茨城県", "栃木県", "群馬県",
                 "埼玉県", "千葉県", "東京都", "神奈川県", "新潟県", "富山県", "石川県", "福井県", "山梨県", "長野県",
                 "岐阜県", "静岡県", "愛知県", "三重県", "滋賀県", "京都府", "大阪府", "兵庫県", "奈良県", "和歌山県",
                 "鳥取県", "島根県", "岡山県", "広島県", "山口県", "徳島県", "香川県", "愛媛県", "高知県", "福岡県",
                 "佐賀県", "長崎県", "熊本県", "大分県", "宮崎県", "鹿児島県", "沖縄県"));
-        System.out.println(getListprefectureName(prefectureName47, "県"));
+        System.out.println(filterPrefecturesFromPrefecturesArrayList(prefecturesList, "県"));
     }
 
-    public static List<String> getListprefectureName(List<String> prefectureName47, String Capital) {
+    public static List<String> filterPrefecturesFromPrefecturesArrayList (List<String> prefecturesList, String pref) {
         ArrayList<String> prefectureName = new ArrayList<String>();
-        for (int i = 0; i < prefectureName47.size(); i++) {
-            if (prefectureName47.get(i).endsWith(Capital)) {
-                prefectureName.add(prefectureName47.get(i));
+        for (int i = 0; i < prefecturesList.size(); i++) {
+            if (prefecturesList.get(i).endsWith(pref)) {
+                prefectureName.add(prefecturesList.get(i));
             }
         }
         //System.out.println(prefectureName);

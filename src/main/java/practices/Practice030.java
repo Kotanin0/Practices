@@ -19,34 +19,25 @@ public class Practice030 {
         // ここはご自由にお使いください
         //500円があったら1,なかったら0
         int fiveHundredStockFlag = 0;
-        System.out.println(coincheck(1238, fiveHundredStockFlag));
+        System.out.println(coincheck(1270, fiveHundredStockFlag));
     }
 
     public static String coincheck(int n, int check) {
         String br = System.getProperty("line.separator");
+
         //0以下の数値を空で返す
         if (0 >= n) return "";
-
+        //コインの枚数も表示させる
         String getCoinCheck = "";
         int count = 0;
-        int[] coins = {500, 250, 100, 50, 25, 10, 5, 1};
+        int[] coins = {750, 500, 250, 100, 50, 25, 10, 5, 1};
 
-        if (check == 0) {
-            for (int i = 0; i < coins.length; i++) {
-                if (n > coins[i]) {
-                    count = n / coins[i];
-                    n %= coins[i];
-                    getCoinCheck += coins[i] + "円=" + count + "枚" + br;
-                }
-            }
-            return getCoinCheck;
-        } else {
-            for (int i = 1; i < coins.length; i++) {
-                if (n > coins[i]) {
-                    count = n / coins[i];
-                    n %= coins[i];
-                    getCoinCheck += coins[i] + "円=" + count + "枚" + br;
-                }
+        for (int i = 0; i < coins.length; i++) {
+            if (coins[i] == 500 && check == 0) continue;
+            if (n > coins[i]) {
+                count = n / coins[i];
+                n %= coins[i];
+                getCoinCheck += coins[i] + "円=" + count + "枚" + br;
             }
         }
         return getCoinCheck;

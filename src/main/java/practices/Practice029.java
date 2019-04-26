@@ -1,5 +1,6 @@
 package practices;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,7 +20,8 @@ public class Practice029 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
         List<Fruits> getMaxFruitsList = Practice027.fruitsList();
-        totalStockPriceMessege(getMaxFruitsList);
+        //List<Fruits> getMaxFruitsList = new ArrayList<>();
+        System.out.println(totalStockPriceMessege(getMaxFruitsList));
     }
 
     //一番単価が高い果物のリスト情報
@@ -30,15 +32,20 @@ public class Practice029 {
     }
 
     public static String totalStockPriceMessege(List<Fruits> getMaxFruitsList) {
+        //nullの処理
+        if (getMaxFruitsList.size() == 0) return ("エラー（ null ）。");
+
         //一番単価が高い果物の単価
         int priceOfMaxPriceFruits = maxPriceFruitsList(getMaxFruitsList).get(0).getPrice();
+
         //一番単価が高い果物の在庫数
         int stockqtyOfMaxPriceFruits = maxPriceFruitsList(getMaxFruitsList).get(0).getStock();
+
         //一番単価が高い果物の在庫金額
         int totalStockPriceOfMaxPriceFruits = priceOfMaxPriceFruits * stockqtyOfMaxPriceFruits;
 
         System.out.println("世界一" + Practice028.maxPriceFruits(getMaxFruitsList) + "（" + priceOfMaxPriceFruits + "円）"
-                + stockqtyOfMaxPriceFruits + "個" + totalStockPriceOfMaxPriceFruits + "円 お買い上げありがとうございます");
+                + stockqtyOfMaxPriceFruits + "個" + totalStockPriceOfMaxPriceFruits + "円 お買い上げありがとうございます。");
         return "";
     }
 }
