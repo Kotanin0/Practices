@@ -16,7 +16,6 @@ public class Fruits {
     private String fruitsColor;
     private int fruitsUnitPrice;
     private int fruitsStock;
-    private int count = 0;
 
     Fruits(String fruitsName, String fruitsEnglishName,String fruitsColor,int fruitsUnitPrice, int fruitsStock){
         this.fruitsName = fruitsName;
@@ -28,6 +27,7 @@ public class Fruits {
     }
 
     public String getfruitsName(){
+
         return this.fruitsName;
     }
     public String getFruitsEnglishName(){
@@ -51,7 +51,6 @@ public class Fruits {
 
     public void printThanksForBuyingExpensiveFruitsMessage(){
         System.out.println(this.fruitsName + "("+ this.fruitsUnitPrice +")円 "+ this.fruitsStock +"個 ");
-        this.fruitsStock = 0;
     }
 
 }

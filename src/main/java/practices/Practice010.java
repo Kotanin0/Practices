@@ -22,7 +22,7 @@ public class Practice010 {
     // 2進数の文字列を返す
     public static String getBinary(int n) {
 
-        String binary =Integer.toBinaryString(n);
+        return Integer.toBinaryString(n);
 
 /*        if (n < 0) throw new IllegalArgumentException("引数の値が不正です");
         if (n == 0) return "0";
@@ -37,7 +37,7 @@ public class Practice010 {
             binary  = mod + binary ; //余りを文字列(進数配列)に加える※今回は後ろに追加を繰り返すため+=を使わない
         }
 */
-        return binary;
+
     }
 }
 

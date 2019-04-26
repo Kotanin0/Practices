@@ -45,7 +45,7 @@ public class Practice020 {
         return s.matches("[0-9]{3}-?[0-9]{4}-?[0-9]{4}|[0-9]{2}-?[0-9]{4}-?[0-9]{4}");
     }
     public static boolean isMailAddress(String s) {
-        return s.matches("^..*@.*(\\.com|\\.co.jp|\\.ne.jp)$");
+        return s.matches("^..*@.*(\\.com|\\.co\\.jp|\\.ne\\.jp)$");
 
 /*正規表現しなくても答えられた
         if(!(s.contains("@"))) return false;

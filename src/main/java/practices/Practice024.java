@@ -29,7 +29,6 @@ public class Practice024 {
 
     public static List<String> checkPre(List<String> preList, String searchPrefectures){
 //引数確認
-//      System.out.println(preList);
         ArrayList<String> check = new ArrayList<>();
 //引数の文字列「都道府県」を基に返却するリストのみを作成するパターン
         for(int i = 0; i< preList.size();i++){
@@ -38,34 +37,5 @@ public class Practice024 {
             }
         }
         return check;
-
-//一度全てのリストを作成してから、返却するパターン
-/*各都道府県を語尾ごとのリスト化
-        ArrayList<String> ken = new ArrayList<String>();
-        ArrayList<String> fu = new ArrayList<String>();
-        ArrayList<String> dou = new ArrayList<String>();
-        ArrayList<String> to = new ArrayList<String>();
-        for(int i = 0; i< preList.size();i++){
-            if(preList.get(i).endWith("県")) {
-                ken.add(preList.get(i));
-            }else if(preList.get(i).endWith("府")){
-                fu.add(preList.get(i));
-            }else if(preList.get(i).endWith("道")){
-                dou.add(preList.get(i));
-            }else{
-                to.add(preList.get(i));
-            }
-        }
-        System.out.println(ken);
-        System.out.println(fu);
-        System.out.println(dou);
-        System.out.println(to);
-        if(order == "県"){ return ken;}
-        if(order == "府"){ return fu;}
-        if(order == "道"){ return dou;}
-        return to;
-*/
-
     }//都道府県チェックメソッド呼び出し
-
 }//practice24終わり

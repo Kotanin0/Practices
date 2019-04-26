@@ -19,7 +19,7 @@ package practices;
  *
  */
 
-public class Practice011_ver2 {
+public class Practice011ver2 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
         int[] array = {1,3,6,9,10};

@@ -18,23 +18,22 @@ import java.util.Random;
  *
  */
 
-public class Practice021_ver2 {
+public class Practice021Ver2 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
         System.out.println(janken());
     }
 
     public static String janken() {
-        int guCount = 0; int choCount = 0 ; int paCount = 0;
+        int guCount = 0, choCount = 0, paCount = 0;
         Random random = new Random();
-        double count=0 ; double rJ ;
-        double guRatio = 0   ; double choRatio = 0  ;double paRatio =0 ;
+        double count=0, guRatio = 0 , choRatio = 0 , paRatio =0 , jankenChoice ;
         while(!(isRange(guRatio) && isRange(choRatio) && isRange(paRatio) )) {
             count++;
-            rJ = random.nextInt(3);
-            if (rJ == 0) {
+            jankenChoice = random.nextInt(3);
+            if (jankenChoice == 0) {
                 guCount += 1;
-            } else if (rJ == 1) {
+            } else if (jankenChoice == 1) {
                 choCount += 1;
             } else {
                 paCount += 1;
@@ -45,7 +44,11 @@ public class Practice021_ver2 {
         }
 
         int totalRatioPrint = (int)(count/count * 100);
-        return "グー：" + guCount+ "回"+ " (" + Math.round(guRatio * 100) + "%) \r\n" + "チョキ：" + choCount+ "回"+ " (" + Math.round(choRatio * 100) + "%) \r\n" + "パー：" + paCount+ "回"+ " (" + Math.round(paRatio*100) + "%) \r\n"+"合計：" + Math.round(count) + "回"+ " (" + totalRatioPrint + "%) ";
+        String br = System.getProperty("line.separator");
+        return "グー：" + guCount+ "回"+ " (" + Math.round(guRatio * 100) + "%)" + br
+                + "チョキ：" + choCount+ "回"+ " (" + Math.round(choRatio * 100) + "%)" + br
+                + "パー：" + paCount+ "回"+ " (" + Math.round(paRatio*100) + "%)" + br
+                +"合計：" + Math.round(count) + "回"+ " (" + totalRatioPrint + "%)";
     }
 
     public static boolean isRange(double ratio){

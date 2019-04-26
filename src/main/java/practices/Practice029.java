@@ -22,34 +22,19 @@ public class Practice029 {
 //メソッド内で合計金額を出す
 //表示する
         List<Fruits> fruitsArrayList = Practice027.FruitsList();
-        List<Fruits> expensiveFruitsList = Practice028.maxPriceFruitsCheck(fruitsArrayList);
+        List<Fruits> expensiveFruitsList = Practice028.expensivePriceFruitsCheck(fruitsArrayList);
 //購入金額の算出
-        int totalPurchaseCost = toBuyExpensivePriceFruitCost(expensiveFruitsList);
+        int totalPrice = priceToBuyExpensiveFruit(expensiveFruitsList);
 //まず購入対象の商品を表示する
         expensiveFruitsList.forEach(i -> i.printThanksForBuyingExpensiveFruitsMessage());
-        System.out.println("合計："+ totalPurchaseCost + "円のお買い上げありがとうございます！！");
-
+        System.out.println("合計："+ totalPrice + "円のお買い上げありがとうございます！！");
     }
 
-    public static int toBuyExpensivePriceFruitCost(List<Fruits> n){
+    public static int priceToBuyExpensiveFruit(List<Fruits> n){
         int itemSum = 0;
         for (int i = 0; i < n.size() ; i++) {
             itemSum += n.get(i).getFruitsUnitPrice() * n.get(i).getFruitsstock();
         }
         return itemSum;
-/*
-        int totalCost = n.stream()
-                .map(p -> p.getFruitsUnitPrice())
-                .max((p1, p2) -> Integer.compare(p1,p2))
-                .orElse(0);
-
-
-        int unitPrice = maxPriceFruits.get(0).getFruitsUnitPrice();
-        int totalPurchaseCount = maxPriceFruits.get(0).getFruitsstock();
-        int totalPurchaseCost = unitPrice * totalPurchaseCount;
-        return totalPurchaseCost;
-*/
     }
-
-
 }

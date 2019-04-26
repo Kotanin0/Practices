@@ -20,12 +20,12 @@ public class Practice008 {
     public static String factorization(int n) {
         String result = "";
         if(n < 2)throw new IllegalArgumentException("引数の値が不正です");
-        int m = n;
-        for (int i = 2; n >= i; i++) {
-            while ((m % i) == 0) {
-                System.out.println("因数：" + i);
-                result += " " + i;
-                m /= i;
+
+        for (int factor = 2; n >= factor; factor++) {
+            while ((n % factor) == 0) {
+                System.out.println("因数：" + factor);
+                result += " " + factor;
+                n /= factor;
             }
         }
         //後からスペース削除パターン
