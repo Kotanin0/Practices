@@ -13,4 +13,10 @@ package practices.items;
  */
 
 public class Practice102 {
+    public static void main(String[] args) {
+        Item item = new Item("Water", "hardWater", "MIZU", 100, 200);
+        ItemGroup itemGroup = new ItemGroup("waterGroup");
+        item.printData();
+
+    }
 }

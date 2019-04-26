@@ -7,4 +7,12 @@ package practices.items;
 
 
 public class ItemGroup {
+    public String itemGroupName;
+
+    ItemGroup(String itemGroupName) {
+     this.itemGroupName = itemGroupName;
+    }
+
+
+
 }
