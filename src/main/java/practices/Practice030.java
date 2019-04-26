@@ -18,7 +18,7 @@ public class Practice030 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
         //500円があったら1,なかったら0
-        int fiveHundredStockFlag = 0;
+        int fiveHundredStockFlag = 1;
         System.out.println(coincheck(1270, fiveHundredStockFlag));
     }
 
@@ -27,10 +27,10 @@ public class Practice030 {
 
         //0以下の数値を空で返す
         if (0 >= n) return "";
-        //コインの枚数も表示させる
+
         String getCoinCheck = "";
         int count = 0;
-        int[] coins = {750, 500, 250, 100, 50, 25, 10, 5, 1};
+        int[] coins = {500, 250, 100, 50, 25, 10, 5, 1};
 
         for (int i = 0; i < coins.length; i++) {
             if (coins[i] == 500 && check == 0) continue;
