@@ -9,7 +9,7 @@ package practices;
  * 　例）引数を1にした場合の出力は「1 2 3 4 5 6 7 8 9」
  */
 
-public class Practice006_ver2 {
+public class Practice006Ver2 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
         int num = 9;

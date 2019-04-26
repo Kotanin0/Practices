@@ -14,7 +14,7 @@ package practices;
  * ※ 0 は 正の偶数 であるとする。
  */
 
-public class Practice003_ver2 {
+public class Practice003Ver2 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
         int num = 0;

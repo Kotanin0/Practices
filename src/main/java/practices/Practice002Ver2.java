@@ -4,7 +4,7 @@ package practices;
  * 正の整数値を入力し、それが偶数か判定する関数 isOdd を作成しなさい
  */
 
-public class Practice002_ver2 {
+public class Practice002Ver2 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
         int x = 1;

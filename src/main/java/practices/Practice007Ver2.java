@@ -7,7 +7,7 @@ package practices;
  * 返却：true/false
  */
 
-public class Practice007_ver2 {
+public class Practice007Ver2 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
         System.out.println(isPrime(113));
