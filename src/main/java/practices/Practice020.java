@@ -44,6 +44,7 @@ public class Practice020 {
 
     public static boolean isPostNumber(String s) {
         //return s.matches("^[0-9]{7}|[0-9]{3}-[0-9]{4}$");
+        //英数字をだす→\\d
         return s.matches("^\\d{7}|\\d{3}-\\d{4}");
         //return false;
     }
