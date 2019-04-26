@@ -63,7 +63,7 @@ public class Practice201 {
             }
 
             //得点
-            temp = judge(declareHands, playHands);
+            temp = judge(declareHands, playHands,player1,player2);
             for (int j = 0; j < temp.length; j++) {
                 sumPointPlayers[j] += temp[j];
             }
@@ -108,12 +108,15 @@ public class Practice201 {
     }
 
     //得点をかえす
-    public static int[] judge(int[] declareHands, int[] playHands) {
+    //得点をかえす、JankenManにも勝敗をかえす
+
+    public static int[] judge(int[] declareHands, int[] playHands, JankenMan player1, JankenMan player2) {
         int[] returnInt = new int[2];
 
         if (declareHands.length != 2 || playHands.length != 2) {
             return returnInt;
         }
+
         for (int i = 0; i < 2; i++) {
             if (declareHands[i] > 2 || declareHands[i] > 2){
                 return returnInt;
@@ -129,18 +132,25 @@ public class Practice201 {
             case 0://あいこ
                 returnInt[0] += declareHands[0] == playHands[0] ? 1 : -1;
                 returnInt[1] += declareHands[1] == playHands[1] ? 1 : -1;
+                player1.result("あいこ");
+                player2.result("あいこ");
                 break;
             case 1://player1の勝ち
                 returnInt[0] += declareHands[0] == playHands[0] ? 5 : 3;
                 returnInt[1] += declareHands[1] == playHands[1] ? -3 : -5;
+                player1.result("勝ち");
+                player2.result("負け");
                 break;
             case 2://player2の勝ち
                 returnInt[0] += declareHands[0] == playHands[0] ? -3 : -5;
                 returnInt[1] += declareHands[1] == playHands[1] ? 5 : 3;
+                player1.result("負け");
+                player2.result("勝ち");
                 break;
         }
 
         return returnInt;
+
     }
 
     public static boolean isHandBetweenZeroToToo(int n) {
