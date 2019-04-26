@@ -19,8 +19,13 @@ public class Practice004 {
 
     // 試験の結果を返却する
     public static String showResult(int n) {
+        return (n >= 60) ? "合格" : "不合格";
 
-        return hogehoge;
+        //if版　一応残しておく
+        //  if (n >= 60) {
+        //      return "合格";
+        //  } else {
+        //      return "不合格";
+        //  }
     }
-
 }

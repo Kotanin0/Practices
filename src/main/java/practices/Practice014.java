@@ -2,10 +2,9 @@ package practices;
 
 /**
  * 西暦を入力するとうるう年か判定する関数 isLeapYear を作成しなさい
- *
+ * <p>
  * 引数：整数
  * 返却：true/false
- *
  */
 
 public class Practice014 {
@@ -16,8 +15,7 @@ public class Practice014 {
 
     // うるう年ならtrue
     public static boolean isLeapYear(int n) {
-
-        return true;
+        return (n % 4 == 0 && n % 100 != 0 || n % 400 == 0);
     }
 
 }
