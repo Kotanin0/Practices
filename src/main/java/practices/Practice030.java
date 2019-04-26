@@ -18,7 +18,7 @@ public class Practice030 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
         //mainではチェックしたいpriceとコインの在庫有無を入力する。
-        //あくまでもcoinCheckは硬貨の枚数のみをカウントするメソッド
+        //coinCheckは硬貨の枚数のみをカウントするメソッド
 
         int yen = 843;
         CoinsStatus coinsStatus = new CoinsStatus();
