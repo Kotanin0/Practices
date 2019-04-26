@@ -1,47 +1,67 @@
 package practices;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.stream.Collectors;
+
 /**
  * Practice019 で作成した coincheck を拡張しなさい
- *
+ * <p>
  * 仕様追加）
  * ・元号が変わったので、新しい硬貨ができました！
  * 　250円玉、25円玉
  * ・硬貨の枚数が0枚の時は、出力しなくて良い
  * ・500円玉が切れている場合があるらしいので、500円玉でかえす or かえさないを引数に追加してください
- *
+ * <p>
  * 提出方法）
  * ・Practice019のcoincheckを、本クラスにコピーして、まずプルリクエストを出してください
  * ・その後、解いてください
- *
  */
 
 public class Practice030 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
 
+        System.out.println(coincheck(3927, 1));
     }
 
-    public static String coincheck(int n) {
+    public static String coincheck(int n, int m) {
 
-        int a = n / 500;//500円の枚数
-        int b = n % 500;
-        int c = b / 100;//100円の枚数
-        int d = b % 100;
-        int e = d / 50;//50円の枚数
-        int f = d % 50;
-        int g = f / 10;//10円の枚数
-        int h = f % 10;
-        int i = h / 5;//5円の枚数
-        int j = h % 5;//1円の枚数
+        ArrayList<Integer> coinList = new ArrayList<>();
+        ArrayList<Integer> coinListAll = new ArrayList<>(Arrays.asList(100, 250, 500, 50, 25, 10, 5, 1));
+        ArrayList<Integer> coinListExcept500 = new ArrayList<>(Arrays.asList(25, 100, 50, 250, 10, 5, 1));
 
-        String br = System.getProperty("line.separator");//環境依存せずに改行コードを取得している
+        //500円玉が切れているかどうかの場合分け
+        switch (m) {
+            case 0://全部のコインがある
+                coinList = new ArrayList<>(coinListAll);
+                break;
+            case 1://500円玉が切れている
+                coinList = new ArrayList<>(coinListExcept500);
+                break;
+        }
+        int amount = n;
+        {
+            //コインリストの格納順がバラバラになっている場合を考慮
+            ArrayList<Integer> coinListSorted =
+                    coinList.stream()
+                            .sorted(Comparator.reverseOrder()) //金額の大きいコイン順にソート
+                            .collect(Collectors.toCollection(ArrayList::new));//その順番でリストに格納する
 
-        if (n > 0) {
-            return "500円＝" + a + "枚" + br + "100円＝" + c + "枚" + br + "50円＝" + e + "枚" + br + "10円＝" + g + "枚" + br + "5円＝" + i + "枚" + br + "1円＝" + j + "枚";
-        } else {
+            ArrayList<Integer> coinResult = new ArrayList<>();   //使ったコイン格納用
+            ArrayList<Integer> countResult = new ArrayList<>();  //使ったコインの枚数格納用
+
+            for (int i = 0; i < coinListSorted.size(); i++) {
+                if (amount / coinListSorted.get(i) != 0) coinResult.add(coinListSorted.get(i));
+                if (amount / coinListSorted.get(i) != 0) countResult.add(amount / coinListSorted.get(i));
+                amount = amount % coinListSorted.get(i);
+            }
+            for (int i = 0; i < coinResult.size(); i++) {
+                System.out.println(coinResult.get(i) + "円 " + countResult.get(i) + "枚");
+            }
             return "";
-
         }
     }
-}
 
+}
