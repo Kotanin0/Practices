@@ -78,10 +78,7 @@ public class Practice030 {
         }
 
         public boolean equals(Coin value) {
-            if (this.coinNameInt == value.getCoinNameInt()) {
-                return true;
-            }
-            return false;
+            return this.coinNameInt == value.getCoinNameInt();
         }
     }
 }
