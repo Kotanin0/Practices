@@ -1,4 +1,5 @@
 package practices;
+import java.util.*;
 
 /**
  * 配列の中身を小さい順に並べ替える関数 sort を作成しなさい
@@ -14,13 +15,27 @@ package practices;
 public class Practice013 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        int[] ex = {2, 9, 1, 0, -7, 6}; //コ
+        for(int g : ex) {
+            System.out.println(g);
+        }
+        sort(ex);
     }
 
     // 並べ替えられた配列を返す
     public static int[] sort(int[] n) {
 
+// ライブラリ使わず
+        for(int i = 0; i < n.length ; i++){
+            for(int k = i; k < n.length; k++){
+                if(n[k] < n[i]) {
+                    int a = n[k];
+                    n[k] = n[i];
+                    n[i] = a;
+                }
+            }
+            System.out.println("配列番号"+ i + "値" +n[i]);
+        }
         return n;
     }
-
 }

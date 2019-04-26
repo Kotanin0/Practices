@@ -20,12 +20,26 @@ package practices;
 public class Practice019 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        int yen = 398;
+        coincheck(yen);
     }
 
     public static String coincheck(int n) {
+        if(n <= 0) return "";
+        int[] coins = {500,100,50,10,5,1};
+        int[] count = new int[coins.length];
+        String result = "";
+        for(int i = 0 ; i < coins.length ; i++){
+            count[i] = n / coins[i];
+            n %= coins[i];
 
-        return "";
+            if(i < coins.length-1) {
+                result += coins[i] + "円＝" + count[i] + "枚\r\n";
+            }else{
+                result += coins[i] + "円＝" + count[i] + "枚";
+            }
+        }
+        System.out.println(result);
+        return result;
     }
-
 }

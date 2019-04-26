@@ -14,25 +14,28 @@ package practices;
  * ※ 0 は 正の偶数 であるとする。
  */
 
-public class Practice003 {
+public class Practice003Ver2 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        int num = 10;
-
-        System.out.println(displayText(num));
+        int num = 0;
+        System.out.println("徳村さんケース：" + displayText(num));
+        System.out.println("メソッド呼び出しケース：" + isPositive(num)+ "の" + isEven(num));
     }
-
     // 正の偶数、正の奇数、負の偶数、負の奇数のいずれかを返却する
     public static String displayText(int n) {
-        if(n >= 0 && n%2==0){
-            return "正の偶数";
-        }else if(n < 0 && n%2==0){
-            return "負の偶数";
-        }else if(n >= 0 && n%2!=0){
-            return "正の奇数";
-        }else{
-            return "負の奇数";
-        }
+        if(n == 0) return "ゼロ";
+        String s = n > 0 ? "正の" : "負の";
+        s += n % 2 == 0 ? "偶数": "奇数";
+        return s;
     }
 
+    public static String isPositive(int n){
+        if(n == 0) return "ゼロ";
+        return n > 0 ? "正" : "負";
+    }
+
+    public static String isEven(int n){
+        if(n == 0) return "";
+        return n % 2 == 0 ? "偶数" : "奇数";
+    }
 }

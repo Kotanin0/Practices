@@ -11,13 +11,13 @@ package practices;
 public class Practice015 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
+        String test = "mmmmmmmmmmmmmmmmmgegggg";
+        //System.out.println(test.length());
+        System.out.println(ge(test));
 
     }
-
     // "ge" という文字列が含まれているならtrue
     public static boolean ge(String str) {
-
-        return true;
+        return str.contains("ge");
     }
-
 }

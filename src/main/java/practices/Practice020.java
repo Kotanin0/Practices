@@ -30,22 +30,29 @@ package practices;
 public class Practice020 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        String postNumber = "1234567";
+        String phoneNumber = "031234-5678";
+        String mailAddress = "hogo@hogo.com";
+        System.out.println(isPostNumber(postNumber));
+        System.out.println(isPhoneNumber(phoneNumber));
+        System.out.println(isMailAddress(mailAddress));
     }
-
     public static boolean isPostNumber(String s) {
-
-        return false;
+        return s.matches("^[0-9]{3}-?[0-9]{4}$");
     }
-
     public static boolean isPhoneNumber(String s) {
-
-        return false;
+        //return s.matches("[0-9]{11}|[0-9]{3}-[0-9]{4}-?[0-9]{4}|[0-9]{2}-?[0-9]{4}-[0-9]{4}");
+        return s.matches("[0-9]{3}-?[0-9]{4}-?[0-9]{4}|[0-9]{2}-?[0-9]{4}-?[0-9]{4}");
     }
-
     public static boolean isMailAddress(String s) {
+        return s.matches("^..*@.*(\\.com|\\.co\\.jp|\\.ne\\.jp)$");
 
+/*正規表現しなくても答えられた
+        if(!(s.contains("@"))) return false;
+        if(s.substring(0,1).equals("@")) return false;
+        if(s.endsWith(".ne.jp") || s.endsWith(".co.jp") || s.endsWith(".com") ) return true;
         return false;
-    }
+ */
 
+    }
 }
