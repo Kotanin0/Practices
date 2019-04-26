@@ -6,6 +6,7 @@ import com.sun.xml.internal.ws.api.ha.StickyFeature;
 import javax.print.DocFlavor;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * String型のArrayListを作成し、それに47都道府県を格納してください
@@ -23,8 +24,13 @@ public class Practice024 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
 
-        System.out.println(kenMei("県"));
+        Random random = new Random();
+        String[] todofukenName = {"都", "道", "府", "県"};
 
+        for (int i = 0; i <= 30; i++) {
+            int y = random.nextInt(5);
+            System.out.println(kenMei(todofukenName[y]));
+        }
     }
 
     public static List<String> kenMei(String n) {
@@ -41,8 +47,7 @@ public class Practice024 {
 
         List<String> list = new ArrayList<String>();
 
-        if (n == "県" || n == "都" || n == "道" || n == "府") {
-
+        if (n.equals("県") || n.equals("都") || n.equals("道") || n.equals("府")) {
             for (String ken : todofuken) {
                 if (ken.endsWith(n)) {
                     list.add(ken);
