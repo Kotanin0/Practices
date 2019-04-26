@@ -33,8 +33,7 @@ public class Practice029 {
                 .collect(Collectors.toList());
 
         if (x.size() == 0) {
-            List<Fruits> returnIfListisNull = new ArrayList<>();
-            return returnIfListisNull;
+            return new ArrayList<Fruits>();
         }
 
         x.get(0).buyUpAlltheFruit();
