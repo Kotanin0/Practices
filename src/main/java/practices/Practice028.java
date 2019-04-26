@@ -55,6 +55,9 @@ public class Practice028 {
         List<Fruits> x = fruits.stream()
                 .sorted((fruit1, fruit2) -> fruit2.getPrice() - fruit1.getPrice())
                 .collect(Collectors.toList());
+        if (x.size() == 0) {
+            return new Fruits();
+        }
         return x.get(0);
     }
 

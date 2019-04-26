@@ -24,6 +24,10 @@ public class Fruits {
         this.stocks = stocks;
     }
 
+    public Fruits(){
+
+    }
+
     public int getPrice() {
         return price;
     }
