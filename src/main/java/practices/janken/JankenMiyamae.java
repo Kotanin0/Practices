@@ -16,8 +16,8 @@ public class JankenMiyamae extends JankenMan {
     private static int yourPlayHand;
 
     //直近2回、宣言を裏切ったか？
-    private static int[] myArrayLiar = new int[2];
-    private static int[] yourArrayLiar = new int[2];
+    private static int[] myArrayLiar = new int[3];
+    private static int[] yourArrayLiar = new int[3];
 
     //じゃんけんした回数
     private static int playCount = -1;
@@ -35,13 +35,14 @@ public class JankenMiyamae extends JankenMan {
     public int fight(int declareHand) {
         yourDeclareHand = declareHand;
         winOrLossHand = new WinOrLossHand();
+
         //なにを出すと(勝ち|負け|あいこ)？
-        winOrLossHand.setWinOrLossHand(declareHand);
+        winOrLossHand.setWinOrLossHand(yourDeclareHand);
         myPlayHand = winOrLossHand.win;
 
         //自分の宣言を裏切る手か？
-        myArrayLiar[playCount % 2] = myDeclareHand == myPlayHand ? 0 : 1;
-        if(Arrays.stream(myArrayLiar).sum() ==2){
+        myArrayLiar[playCount % 3] = myDeclareHand == myPlayHand ? 0 : 1;
+        if (Arrays.stream(myArrayLiar).sum() == 3) {
             myPlayHand = myDeclareHand;
         }
 
@@ -49,7 +50,9 @@ public class JankenMiyamae extends JankenMan {
     }
 
     public void result(String win) {
+        winOrLossHand = new WinOrLossHand();
         winOrLossHand.setWinOrLossHand(myDeclareHand);
+
         switch (win) {
             case "勝ち":
                 //相手の手はなんだったか
