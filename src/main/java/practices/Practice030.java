@@ -18,23 +18,27 @@ package practices;
 public class Practice030 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-        System.out.println(coincheck(898));
+        // n = チャックする金額、g = 500円硬貨の有無(500円有り=1, 500円無し=0)
+        System.out.println(coincheck(750,0));
 
     }
 
-    public static String coincheck(int n) {
-        int[] count = new int[]{0, 0, 0, 0, 0, 0};
-        int[] coin = new int[]{500, 100, 50, 10, 5, 1};
+    public static String coincheck(int n, int g) {
+
+        int[] coin = new int[]{500, 250, 100, 50, 25, 10, 5, 1};
+        int[] count = new int[coin.length];
 
         String check = "";
         String br = System.getProperty("line.separator");
 
-        if (n <= 0) {
+        //1000円で割って余り無しなら小銭不要で出力無し
+        if ((n <= 0) || (n % 1000 == 0)) {
             return "";
         }
 
         for (int i = 0; i < coin.length; i++) {
-            //その硬貨を使う枚数
+            //500円硬貨無しの場合は、最初のループ飛ばす処理追加
+            if((g == 0)&&(i == 0)){continue;}
             count[i] = n / coin[i];
             //その硬貨を使った後の余り金額
             n = n % coin[i];
