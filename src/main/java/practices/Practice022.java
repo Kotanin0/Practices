@@ -14,16 +14,18 @@ public class Practice022 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
 
+        int n = 0;
         long startTime = System.currentTimeMillis();
 
         for (int k = 1; k <= 100000; k++) {
             //007で使ったメソッドを呼び出す(デフォルトの文消しちゃったけど…)
             isPrime(k);
-
-            long endTime = System.currentTimeMillis();
-            System.out.println("除算回数" + k + "回");
-            System.out.println("処理時間" + ((endTime - startTime) + "ms"));
+            n = k;
         }
+
+        long endTime = System.currentTimeMillis();
+        System.out.println("除算回数" + n + "回");
+        System.out.println("処理時間" + ((endTime - startTime) + "ms"));
     }
     }
 
