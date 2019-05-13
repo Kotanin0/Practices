@@ -56,16 +56,18 @@ public class Practice021 {
                         break;
                     default:
                         break;
-                } total++;
+                }
+                total++;
                 rockAve = rockCount / total;
-                scissorsAve = scissorsCount/total;
-                paperAve = paperCount/total;
+                scissorsAve = scissorsCount / total;
+                paperAve = paperCount / total;
                 totalAverage = ( rockAve + scissorsAve + paperAve) / 3;
 
-        }return "グー：" + rockCount + "回" + "("+ Math.round(100 * rockAve) +"%)" + br + "チョキ：" + scissorsCount + "回" + "("+ Math.round(100 * scissorsAve) +"%)" + br + "パー：" + paperCount + "回" + "("+ Math.round(100 * paperAve) +"%)" + br + "合計" + Math.round(total) + "回"+ "("+ Math.round(100 * totalAverage) +"%)" ;
-
+        } return "グー：" + rockCount + "回" + "("+ Math.round(100 * rockAve) +"%)" + br
+                 + "チョキ：" + scissorsCount + "回" + "("+ Math.round(100 * scissorsAve) +"%)" + br
+                 + "パー：" + paperCount + "回" + "("+ Math.round(100 * paperAve) +"%)" + br
+                 + "合計" + Math.round(total) + "回"+ "("+ Math.round(100 * totalAverage) +"%)" ;
     }
-
 }
 
 
