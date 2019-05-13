@@ -21,6 +21,16 @@ public class Practice005 {
 
     // 試験の結果を返却する
     public static String showResult(int n) {
+
+        //ガード節に変更し、カッコの数も減らした
+        if (n >= 80) return "優";
+        if (80 > n && n >= 70) return "良";
+        if (70 > n && n >= 60) return "可";
+
+        return "不可";
+
+
+        /* リファクタ前の記述
         if (n >= 80) {
             return "優";
         } else if ((80 > n) && (n >= 70)) {
@@ -30,6 +40,8 @@ public class Practice005 {
         } else{
             return "不可";
         }
+
+         */
     }
 
 }
