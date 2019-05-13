@@ -18,7 +18,7 @@ public class Practice015 {
     public static boolean ge(String str) {
 
         //ガード節
-        return (str.contains("ge"));
+        return str.contains("ge");
 
     }
 
