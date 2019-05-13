@@ -18,13 +18,18 @@ public class Practice018 {
     }
 
     public static String fizzbuzz(int n) {
+
+        //前述の問題をなるべく利用したいので、下記だけで済む。
+        return Practice016.fizz(n) + Practice017.buzz(n);
+
+        /* リファクタ前の記述
         if ( n == 0 ) return "";
         if ((n % 3 == 0 || String.valueOf(n).contains("3")) && ((n % 5 == 0 || String.valueOf(n).contains("5")))) return "fizzbuzz";
         if ((n % 3 == 0 || String.valueOf(n).contains("3"))) return "fizz";
         if ((n % 5 == 0 || String.valueOf(n).contains("5"))) return "buzz";
 
         return "";
+
+         */
     }
 }
-        //前述の問題をなるべく利用したいので、その場合は下記だけで済む。
-        //return Practice016.fizz(n) + Practice017.buzz(n);
