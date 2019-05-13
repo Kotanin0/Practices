@@ -37,23 +37,33 @@ public class Practice001 {
     // 商
     public static int sho(int x, int y) {
 
-        if (y == 0) {
-            return 0;
-        } else {
-            return x / y;
-        }
+        //三項演算子での記述
+        return y == 0 ? 0 : x / y ;
 
-
+        /*最初書いた三項演算子失敗例
+         (y == 0) ? 0 : x / y ;
+        */
+        /*普通に書いたもの（冗長）
+         if (y == 0) {
+             return 0;
+         } else {
+             return x / y;
+         }
+        */
     }
 
     // 余り
     public static int amari(int x, int y) {
 
+        //三項演算子での記述
+        return y == 0 ? 0 : x % y ;
+
+         /*普通に書いたもの（冗長）
         if (y == 0) {
             return 0;
         } else {
             return x % y;
         }
-
+         */
     }
 }
