@@ -39,7 +39,7 @@ public class Practice019 {
             //その硬貨を使う枚数
             count[i] = n / coin[i];
             //その硬貨を使った後の余り金額
-            n = n % coin[i];
+            n %= coin[i];
 
             check += coin[i] + "円＝" + count[i] + "枚" + br;
         }
