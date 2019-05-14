@@ -17,7 +17,9 @@ public class Practice015 {
     // "ge" という文字列が含まれているならtrue
     public static boolean ge(String str) {
 
-        return true;
+        //ガード節
+        return str.contains("ge");
+
     }
 
 }

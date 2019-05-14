@@ -1,5 +1,10 @@
 package practices;
 
+import java.util.Comparator;
+import java.util.stream.Collectors;
+
+import static java.util.Comparator.comparing;
+
 /**
  * さらに果物リストを続けて利用し、以下の関数を作成しなさい
  *
@@ -16,8 +21,34 @@ package practices;
 public class Practice029 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+       System.out.println(buyallmaxPrice());
     }
 
+    public static String buyallmaxPrice() {
+
+        //毎回maxPriceな商品を抽出するのは無駄なので一度の抽出に抑えたい＆028を上手く使いたいが…（ex.Practice028.maxPrice()～みたいな）
+
+        String maxpriceName =
+               Practice027.FruitsList().stream()
+                .max(comparing(p -> p.getPrice()))
+                .map(p -> p.getJapaneseName())
+                .get();
+
+
+        int maxpricePrice =
+               Practice027.FruitsList().stream()
+                .max(comparing(p -> p.getPrice()))
+                .map(p -> p.getPrice())
+                .get();
+
+        int maxpriceStock =
+               Practice027.FruitsList().stream()
+                .max(comparing(p -> p.getPrice()))
+                .map(p -> p.getStock())
+                .get();
+
+        return maxpriceName + "（" + maxpricePrice + "円" + "）" + " " + maxpriceStock + "個" + " " + (maxpriceStock * maxpricePrice) + "円" + " " + "お買い上げありがとうございます";
+
+    }
 
 }

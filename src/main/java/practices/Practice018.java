@@ -14,12 +14,22 @@ package practices;
 public class Practice018 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+    System.out.println(fizzbuzz(0));
     }
 
     public static String fizzbuzz(int n) {
 
-        return "";
-    }
+        //前述の問題をなるべく利用したいので、下記だけで済む。
+        return Practice016.fizz(n) + Practice017.buzz(n);
 
+        /* リファクタ前の記述
+        if ( n == 0 ) return "";
+        if ((n % 3 == 0 || String.valueOf(n).contains("3")) && ((n % 5 == 0 || String.valueOf(n).contains("5")))) return "fizzbuzz";
+        if ((n % 3 == 0 || String.valueOf(n).contains("3"))) return "fizz";
+        if ((n % 5 == 0 || String.valueOf(n).contains("5"))) return "buzz";
+
+        return "";
+
+         */
+    }
 }

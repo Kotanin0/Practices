@@ -1,5 +1,7 @@
 package practices;
 
+import java.util.Arrays;
+
 /**
  * 配列の中身を小さい順に並べ替える関数 sort を作成しなさい
  *
@@ -14,13 +16,21 @@ package practices;
 public class Practice012 {
     public static void main(String[] args) {
         // ここはご自由にお使いください
-
+        //System.out.println ();
     }
 
     // 並べ替えられた配列を返す
     public static int[] sort(int[] n) {
 
-        return n;
-    }
+        Arrays.sort(n);
 
+        //この後になぜかfor文書いてわけわかめになっていたが、普通に配列を配列で返せばいいから取り出す意味なし
+            return n;
+    }
 }
+
+
+
+
+
+

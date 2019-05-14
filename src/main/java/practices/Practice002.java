@@ -12,7 +12,15 @@ public class Practice002 {
 
     // 偶数判定
     public static boolean isOdd(int n) {
-        return false;
+        return n % 2 == 0;
     }
+        /* リファクタ前の記述法
+        if(n % 2 ==0) {
 
+            return true;
+        } else {
+            return false;
+        }
+    }
+    */
 }
